@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 245478926}
   - component: {fileID: 245478928}
   - component: {fileID: 245478927}
+  - component: {fileID: 245478929}
   m_Layer: 0
   m_Name: WaterGirl
   m_TagString: Untagged
@@ -229,6 +230,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &245478929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 245478925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05f7e05f309ae924081ac032c590ff2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controlType: 1
 --- !u!1 &380876777
 GameObject:
   m_ObjectHideFlags: 0
@@ -438,6 +452,8 @@ GameObject:
   - component: {fileID: 842934047}
   - component: {fileID: 842934049}
   - component: {fileID: 842934048}
+  - component: {fileID: 842934050}
+  - component: {fileID: 842934051}
   m_Layer: 0
   m_Name: FireBoy
   m_TagString: Untagged
@@ -533,6 +549,31 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &842934050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 842934046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05f7e05f309ae924081ac032c590ff2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controlType: 0
+--- !u!114 &842934051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 842934046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d88320a60eef08042abc93d188247237, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1058527359
 GameObject:
   m_ObjectHideFlags: 0
