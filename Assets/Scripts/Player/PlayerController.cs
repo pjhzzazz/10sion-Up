@@ -8,7 +8,7 @@ public class PlayerController : Player
     public ControlType controlType = ControlType.Player1;
 
     public float jumpForce = 5f;
-    private bool isGrounded = true; // 바닥에 있을 때만 점프 가능
+    private bool isGrounded = true; 
 
     protected override void HandleAction()
     {

@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 245478929}
   - component: {fileID: 245478930}
   m_Layer: 0
-  m_Name: WaterGirl
+  m_Name: FireBoy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -469,7 +469,7 @@ GameObject:
   - component: {fileID: 842934050}
   - component: {fileID: 842934051}
   m_Layer: 0
-  m_Name: FireBoy
+  m_Name: WaterGirl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
