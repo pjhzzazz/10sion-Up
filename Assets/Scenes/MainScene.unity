@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 245478927}
   - component: {fileID: 245478929}
   - component: {fileID: 245478930}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FireBoy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -269,7 +269,7 @@ GameObject:
   - component: {fileID: 380876778}
   - component: {fileID: 380876779}
   - component: {fileID: 380876780}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MainSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -469,7 +469,7 @@ GameObject:
   - component: {fileID: 842934048}
   - component: {fileID: 842934050}
   - component: {fileID: 842934051}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WaterGirl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -602,7 +602,7 @@ GameObject:
   - component: {fileID: 1058527360}
   - component: {fileID: 1058527361}
   - component: {fileID: 1058527362}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MainSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
