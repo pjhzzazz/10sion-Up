@@ -1494,24 +1494,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1e99ce10eb52494a9e4b5bfe1160ddf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stageManager: {fileID: 0}
-  startObj: {fileID: 0}
-  startBtn: {fileID: 0}
-  startOptionBtn: {fileID: 0}
-  stageObj: {fileID: 0}
-  stageButtons: []
-  mainObj: {fileID: 0}
-  gameOverImg: {fileID: 0}
-  optionImg: {fileID: 0}
-  nextStageImg: {fileID: 0}
-  mainOptionBtn: {fileID: 0}
-  resumeBtn: {fileID: 0}
-  retryBtn: {fileID: 0}
-  retryBtn2: {fileID: 0}
-  mainMenuBtn: {fileID: 0}
-  EndBtn: {fileID: 0}
-  continueBtn: {fileID: 0}
-  starImg: []
+  stageManager: {fileID: 6951992770821108590, guid: 9f95aaa3953956e438770b6991273176, type: 3}
+  startObj: {fileID: 4445410684445895643}
+  startBtn: {fileID: 593935221466102297}
+  startOptionBtn: {fileID: 3969338656786641951}
+  stageObj: {fileID: 6579837056026984773}
+  stageButtons:
+  - {fileID: 3031757681118174149}
+  - {fileID: 4173767698361052479}
+  - {fileID: 3538647183742150633}
+  mainObj: {fileID: 8601535258221234169}
+  gameOverImg: {fileID: 1561577964601824386}
+  optionImg: {fileID: 6451358295611047111}
+  nextStageImg: {fileID: 3678436206322301144}
+  mainOptionBtn: {fileID: 3434875399164443330}
+  resumeBtn: {fileID: 91599887032772460}
+  retryBtn: {fileID: 5891398131685473757}
+  retryBtn2: {fileID: 5899063691247972009}
+  mainMenuBtn: {fileID: 8512679188447145528}
+  EndBtn: {fileID: 2844458861254488923}
+  continueBtn: {fileID: 2844458861254488923}
+  starImg:
+  - {fileID: 5244492818743929622}
+  - {fileID: 365684385897553013}
+  - {fileID: 5595870482153404925}
+  - {fileID: 5815040131015532831}
+  - {fileID: 3360494553782004704}
 --- !u!1 &4140425260323150155
 GameObject:
   m_ObjectHideFlags: 0

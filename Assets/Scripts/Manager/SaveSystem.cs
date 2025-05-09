@@ -6,16 +6,16 @@ public class SaveSystem : MonoBehaviour
 {
     private const string clearedStageKey = "ClearStage";
 
-    public static void SaveClearedStage(int stage)
+    public static void SaveClearedStage(int stageIndex) // 저장
     {
-        if (stage > GetClearedStage()) // 더 높은 스테이지 저장
+        if (stageIndex > GetClearedStage())
         {
-            PlayerPrefs.SetInt("ClearStage", stage);
+            PlayerPrefs.SetInt("ClearStage", stageIndex);
             PlayerPrefs.Save();
         }
     }
 
-    public static int GetClearedStage()
+    public static int GetClearedStage() // 불러오기
     {
         return PlayerPrefs.GetInt("ClearStage", 0);
     }

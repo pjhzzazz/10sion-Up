@@ -7,6 +7,9 @@ TagManager:
   - WaterPlayer
   - FirePlayer
   - Ground
+  - Gem
+  - RedPlayer
+  - BluePlayer
   layers:
   - Default
   - TransparentFX

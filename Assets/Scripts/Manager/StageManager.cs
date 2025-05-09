@@ -7,11 +7,11 @@ public class StageManager : MonoBehaviour
 {
 
     [Header("캐릭터 프리팹")]
-    public GameObject fireboyPrefab;
-    public GameObject watergirlPrefab;
+    public GameObject RedPlayerPrefab;
+    public GameObject BluePlayerPrefab;
 
     [Header("스테이지 추가")]
-    public Transform[] stageParents;
+    public GameObject[] stageParents;
     public int currentStage;
 
     private void Start()
@@ -20,52 +20,51 @@ public class StageManager : MonoBehaviour
 
         if (currentScene == "MainScene")
         {
-            SpawnCharacters(currentStage);
+            currentStage = GameManager.gameManager.SelectedStageIndex;
+            ChangeStage(currentStage);
         }
     }
 
-    public void SpawnCharacters(int stage)
+    public void ChangeStage(int stageIndex) // 스테이지 전환
     {
-        Debug.Log($"[SpawnCharacters] stage: {stage}");
-
-        if (stageParents == null || stageParents.Length <= stage || stageParents[stage] == null)
+        for (int i = 0; i < stageParents.Length; i++)
         {
-            Debug.LogError("[StageManager] stageParents가 비었거나 해당 인덱스가 null입니다.");
-            return;
+            stageParents[i].SetActive(i == stageIndex);
         }
 
-        Transform stagePosition = stageParents[stage];
-        Transform fireboySpawn = stagePosition.Find("FireboySpawn");
-        Transform watergirlSpawn = stagePosition.Find("WatergirlSpawn");
-
-        if (fireboySpawn == null || watergirlSpawn == null)
-        {
-            Debug.LogError("[StageManager] 스폰 위치를 찾을 수 없습니다.");
-            return;
-        }
-
-        Debug.Log($"[SpawnCharacters] 위치: Fireboy({fireboySpawn.position}), Watergirl({watergirlSpawn.position})");
-
-        foreach (var player in GameObject.FindGameObjectsWithTag("Player"))
-        {
-            Destroy(player);
-        }
-
-        GameObject fireboy = Instantiate(fireboyPrefab, fireboySpawn.position, Quaternion.identity);
-        GameObject watergirl = Instantiate(watergirlPrefab, watergirlSpawn.position, Quaternion.identity);
-
-        Debug.Log($"[SpawnCharacters] 생성 완료: {fireboy.name}, {watergirl.name}");
+        currentStage = stageIndex;
+        SpawnCharacters(stageIndex);
     }
 
-    public void ToNextStage()
+    public void SpawnCharacters(int stageIndex) // 캐릭터 스폰
+    {
+        Transform stagePosition = stageParents[stageIndex].transform;
+        Transform RedSpawn = stagePosition.Find("RedSpawn");
+        Transform BlueSpawn = stagePosition.Find("BlueSpawn");
+
+        foreach (var Redplayer in GameObject.FindGameObjectsWithTag("RedPlayer"))
+        {
+            Destroy(Redplayer);
+        }
+
+        foreach (var Blueplayer in GameObject.FindGameObjectsWithTag("BluePlayer"))
+        {
+            Destroy(Blueplayer);
+        }
+
+        GameObject RedPlayer = Instantiate(RedPlayerPrefab, RedSpawn.position, Quaternion.identity);
+        GameObject BluePlayer = Instantiate(BluePlayerPrefab, BlueSpawn.position, Quaternion.identity);
+    }
+
+    public void ToNextStage() //다음 스테이지 이동
     {
         if (currentStage + 1 < stageParents.Length)
         {
             GameManager.gameManager.SaveStageClear(currentStage);
 
             currentStage++;
-            SpawnCharacters(currentStage);
+            ChangeStage(currentStage);
         }
-        else { SceneManagement.sceneManager.ToStartScene(); }
+        else { SceneManagement.sceneManager.ToStageScene(); }
     }
 }

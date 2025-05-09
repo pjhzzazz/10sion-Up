@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3876869857332603154}
   m_Layer: 0
-  m_Name: FireboySpawn
+  m_Name: RedSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +31,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3892004551244042385}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1431773185851205645
+--- !u!1 &1596598737351484066
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -39,24 +39,24 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2325612378008184814}
+  - component: {fileID: 8194007308342652969}
   m_Layer: 0
-  m_Name: FireboySpawn
+  m_Name: BlueSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2325612378008184814
+--- !u!4 &8194007308342652969
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1431773185851205645}
+  m_GameObject: {fileID: 1596598737351484066}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.557, y: -14.929478, z: 0}
+  m_LocalPosition: {x: -3.2859995, y: -8.387738, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -72,7 +72,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2101161164975180412}
   m_Layer: 0
-  m_Name: WatergirlSpawn
+  m_Name: BlueSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -92,6 +92,37 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3892004551244042385}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1858510942113574076
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7455522312736181480}
+  m_Layer: 0
+  m_Name: RedSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7455522312736181480
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858510942113574076}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.557, y: -8.407739, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4932580674120489957}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2526186170733360559
 GameObject:
@@ -119,12 +150,12 @@ Transform:
   m_GameObject: {fileID: 2526186170733360559}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 30, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2.3, y: 2.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2325612378008184814}
-  - {fileID: 9192404490709377445}
+  - {fileID: 7455522312736181480}
+  - {fileID: 8194007308342652969}
   m_Father: {fileID: 8314103474528903754}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8049134405405468876
@@ -179,37 +210,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &4189752751706041828
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 9192404490709377445}
-  m_Layer: 0
-  m_Name: WatergirlSpawn
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &9192404490709377445
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4189752751706041828}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.2859998, y: -14.909478, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4932580674120489957}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5347175964746115467
 GameObject:
   m_ObjectHideFlags: 0
@@ -220,7 +220,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3481966161303052332}
   m_Layer: 0
-  m_Name: FireboySpawn
+  m_Name: RedSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -371,15 +371,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 6807241752186119021}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2548266109848f74c9ba84650212daec, type: 3}
+  m_Script: {fileID: 11500000, guid: b6e4dd9a3267cf641ade0974a5a316fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireboyPrefab: {fileID: 6171298129891913142, guid: e2499372b51beb24398329c3dc3fec36, type: 3}
-  watergirlPrefab: {fileID: 3292704025467702349, guid: cf74d5d5f2c22624e87a07ba0c65a9fe, type: 3}
+  RedPlayerPrefab: {fileID: 6171298129891913142, guid: e2499372b51beb24398329c3dc3fec36, type: 3}
+  BluePlayerPrefab: {fileID: 3292704025467702349, guid: cf74d5d5f2c22624e87a07ba0c65a9fe, type: 3}
   stageParents:
-  - {fileID: 4343105917760522914}
-  - {fileID: 3892004551244042385}
-  - {fileID: 4932580674120489957}
+  - {fileID: 9130971820958316366}
+  - {fileID: 7938938362542430982}
+  - {fileID: 2526186170733360559}
   currentStage: 0
 --- !u!1 &7628730265135571904
 GameObject:
@@ -391,7 +391,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5166225594578379092}
   m_Layer: 0
-  m_Name: WatergirlSpawn
+  m_Name: BlueSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -522,7 +522,7 @@ Transform:
   m_GameObject: {fileID: 7938938362542430982}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 15, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2.3, y: 2.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
