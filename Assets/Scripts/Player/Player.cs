@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
     protected Vector2 lookDirection = Vector2.zero;
     public Vector2 LookDirection { get { return lookDirection; } }
 
-    private float minY = -4.6f;
+    //private float minY = -4.6f;
 
     protected virtual void Awake()
     {
@@ -50,7 +50,7 @@ public class Player : MonoBehaviour
         _rigidbody.velocity = direction;
         animationHandler.Move(direction);
     }
-
+    /*
     void LateUpdate()
     {
         if (transform.position.y < minY)
@@ -59,7 +59,7 @@ public class Player : MonoBehaviour
             _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, 0f);
         }
     }
-
+    */
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (playerType == PlayerType.Fire)
