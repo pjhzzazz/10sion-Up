@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BlueLaserButtonTrigger : MonoBehaviour
 {
-    public LaserManager laserManager;
+    public BlueLaser[] blueLasers;
     private Animator animator;
     private bool isTrigger = false;
 
@@ -13,7 +13,7 @@ public class BlueLaserButtonTrigger : MonoBehaviour
         animator = gameObject.GetComponent<Animator>();
     }
 
-    // Update is called once per frame
+   
     void Update()
     {
         
@@ -22,11 +22,14 @@ public class BlueLaserButtonTrigger : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         //파란색 레이저 제어
-        if (other.CompareTag("WaterPlayer"))    //Todo 플레이어 타입 Water
+        if (other.CompareTag("WaterPlayer"))    
         {
             isTrigger = !isTrigger;
-            animator.SetBool("isTrigger", isTrigger);
-            laserManager.ToggleBlueLasers();
+            animator.SetBool("isTrigger", isTrigger);//스위치 애니메이션 작동
+            for (int i = 0; i < blueLasers.Length; i++)
+            {
+                blueLasers[i].ToggleBlueLaser();//파란색 레이저 제어
+            }
         }
     }
 }

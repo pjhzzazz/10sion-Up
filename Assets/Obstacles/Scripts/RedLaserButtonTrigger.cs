@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RedLaserButtonTrigger : MonoBehaviour
 {
-    public LaserManager laserManager;
+    public RedLaser[] redLasers;
     private Animator animator;
     private bool isTrigger = false;
     // Start is called before the first frame update
@@ -20,13 +20,15 @@ public class RedLaserButtonTrigger : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (animator == null) Debug.LogError(" Animator가 null입니다!");
-        if (laserManager == null) Debug.LogError(" LaserManager가 null입니다!");
-        if (other.CompareTag("FirePlayer"))  //Todo 플레이어 타입 Fire
+       
+        if (other.CompareTag("FirePlayer"))  
         {
             isTrigger = !isTrigger;
-            animator.SetBool("isTrigger", isTrigger);
-            laserManager.ToggleRedLasers();
+            animator.SetBool("isTrigger", isTrigger); // 스위치 애니메이션 작동
+            for (int i = 0; i < redLasers.Length; i++)
+            {
+                redLasers[i].ToggleRedLaser();     //빨간색 레이저 제어
+            }
         }
     }
 }
