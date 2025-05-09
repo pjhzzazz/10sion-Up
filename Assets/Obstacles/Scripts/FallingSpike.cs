@@ -22,7 +22,7 @@ public class FallingSpike : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(!dropped && (collision.gameObject.CompareTag("FirePlayer") || collision.gameObject.CompareTag("WaterPlayer")))
+        if(!dropped && (collision.gameObject.CompareTag("RedPlayer") || collision.gameObject.CompareTag("BluePlayer")))
         {
             StartCoroutine(DelayDrop());
         }
@@ -38,7 +38,7 @@ public class FallingSpike : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.CompareTag("FirePlayer") || collision.gameObject.CompareTag("WaterPlayer"))
+        if(collision.gameObject.CompareTag("RedPlayer") || collision.gameObject.CompareTag("BluePlayer"))
         {
             Destroy(collision.gameObject); // 플레이어 사망
         }
