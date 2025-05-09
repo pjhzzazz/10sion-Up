@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
+    public StageManager stageManager;
+
     [Header("스타트 씬")]
     public GameObject startObj;
     [SerializeField] private Button startBtn;
@@ -37,8 +39,28 @@ public class UIManager : MonoBehaviour
 
     private void Start()
     {
-        //스타트 씬
-        startBtn.onClick.AddListener(ToStage);
+        string currentScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+        if (currentScene == "StartScene")
+        {
+            startObj.SetActive(true);
+            stageObj.SetActive(false);
+            mainObj.SetActive(false);
+        }
+        else if (currentScene == "StageScene")
+        {
+            startObj.SetActive(false);
+            stageObj.SetActive(true);
+            mainObj.SetActive(false);
+        }
+        else if (currentScene == "MainScene")
+        {
+            startObj.SetActive(false);
+            stageObj.SetActive(false);
+            mainObj.SetActive(true);
+        }
+
+            //스타트 씬
+            startBtn.onClick.AddListener(ToStage);
         startOptionBtn.onClick.AddListener(ShowOptionUI);
 
         //스테이지 씬
@@ -88,37 +110,34 @@ public class UIManager : MonoBehaviour
 
     public void Restart()
     {
-        StageManager.stageManager.SpawnCharacters(StageManager.stageManager.currentStage);
+        stageManager.SpawnCharacters(stageManager.currentStage);
+        optionImg.SetActive(false);
     }
 
     public void ToStage()
     {
         SceneManagement.sceneManager.ToStageScene();
-        startObj.SetActive(false);
-        stageObj.SetActive(true);
-        mainObj.SetActive(false);
     }
 
     public void ToStartMenu()
     {
         SceneManagement.sceneManager.ToStartScene();
-        startObj.SetActive(true);
-        stageObj.SetActive(false);
-        mainObj.SetActive(false);
     }
 
     public void Continue()
     {
-        StageManager.stageManager.ToNextStage();
+        stageManager.ToNextStage();
     }
 
     public void SelectedStage(int stage)
     {
-        StageManager.stageManager.SpawnCharacters(stage);
+        StageManager manager = FindObjectOfType<StageManager>();
+        if (manager != null)
+        {
+            manager.currentStage = stage; // 어떤 스테이지를 로드할지 미리 설정만
+        }
+
         SceneManagement.sceneManager.ToMainScene();
-        startObj.SetActive(false);
-        stageObj.SetActive(false);
-        mainObj.SetActive(true);
     }
 
     public void ShowStars(int stars)
