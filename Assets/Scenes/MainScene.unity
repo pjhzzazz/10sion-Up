@@ -243,6 +243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05f7e05f309ae924081ac032c590ff2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerType: 0
   controlType: 1
   jumpForce: 5
 --- !u!114 &245478930
@@ -575,6 +576,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05f7e05f309ae924081ac032c590ff2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerType: 1
   controlType: 0
   jumpForce: 5
 --- !u!114 &842934051
