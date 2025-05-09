@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8749669940114085278}
   - component: {fileID: 918289805910836529}
   - component: {fileID: 271029122990543694}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WaterGirl
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 3643249585797279822}
   - component: {fileID: 3200343818340406675}
   - component: {fileID: 7704255110203065703}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MainSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}

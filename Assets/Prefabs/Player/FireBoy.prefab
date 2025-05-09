@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8365714757531043594}
   - component: {fileID: 6910778207568203371}
   - component: {fileID: 351277069051945700}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MainSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 1046153075373922643}
   - component: {fileID: 8948344802664095299}
   - component: {fileID: 2439728858739371985}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FireBoy
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -226,6 +226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05f7e05f309ae924081ac032c590ff2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerType: 0
   controlType: 0
   jumpForce: 5
 --- !u!114 &2439728858739371985
