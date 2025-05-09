@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/StartScene.unity
+    guid: a975132e50f8bb444a93eaba9e60d637
+  - enabled: 1
+    path: Assets/Scenes/StageScene.unity
+    guid: c2fb9d84c7030164aabd08c808790775
+  - enabled: 0
+    path: Assets/Scenes-Jisu/MainScene.unity
+    guid: 1e948adfbe20953439efd96df7ba5f1f
+  - enabled: 1
     path: Assets/Scenes/MainScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    guid: 8517482c3ce55f04ba2121540c937198
   m_configObjects: {}
