@@ -42,6 +42,10 @@ public class FallingSpike : MonoBehaviour
         {
             Destroy(collision.gameObject); // 플레이어 사망
         }
+        else
+        {
+            Destroy(gameObject);
+        }
            
     }
 }
