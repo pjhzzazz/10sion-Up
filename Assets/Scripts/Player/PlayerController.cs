@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour// 오브젝트 테스트를 위한 플레이어 컨트롤러입니다!!! 삭제예정
 {
     public float Speed = 5f;
     public Rigidbody2D _rigidbody;

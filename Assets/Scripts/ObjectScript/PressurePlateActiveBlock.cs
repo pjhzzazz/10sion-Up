@@ -12,7 +12,7 @@ public class PressurePlateActiveBlock : MonoBehaviour
         Red,
         Blue
     }
-
+    //색 목록중에서 색깔 고르기
     public PlateColor DoorColor;
 
     [SerializeField] private Animator animator;

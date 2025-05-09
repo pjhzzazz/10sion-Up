@@ -6,6 +6,7 @@ public class PressurePlate : MonoBehaviour
 {
     [SerializeField] private Animator animator;
 
+    //색깔 고르기(이미 프리팹 마다 정해져서 다 들어가 있음)
     public PressurePlateActiveBlock.PlateColor SelectedPlateColor;
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -21,6 +22,7 @@ public class PressurePlate : MonoBehaviour
 
     private void SetDoorState(bool open)
     {
+        //활성화되는 블록 불러오기
         foreach (var door in FindObjectsOfType<PressurePlateActiveBlock>())
         {
             if (door.DoorColor == SelectedPlateColor)
