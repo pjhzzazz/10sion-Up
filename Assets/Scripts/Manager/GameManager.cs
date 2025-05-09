@@ -7,9 +7,9 @@ using UnityEngine.SocialPlatforms.Impl;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager gameManager { get; private set; }
+    public static GameManager gameManager { get; set; }
 
-    [SerializeField] private UIManager uiManager;
+    public UIManager uiManager;
 
     public int stars { get; private set;}
 

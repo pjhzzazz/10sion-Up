@@ -9,6 +9,8 @@ public class UIManager : MonoBehaviour
 {
     public StageManager stageManager;
 
+
+
     [Header("½ºÅ¸Æ® ¾À")]
     public GameObject startObj;
     [SerializeField] private Button startBtn;
