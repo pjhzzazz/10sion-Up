@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 30457754232150242}
   - component: {fileID: 503245369880510279}
   m_Layer: 0
-  m_Name: PressurePlate_Blue
+  m_Name: Button_Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

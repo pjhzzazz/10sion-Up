@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2167169796923881716}
   - component: {fileID: 5648873652354800219}
   m_Layer: 0
-  m_Name: DoorBlock_Green
+  m_Name: ButtonDoorBlock_Green
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

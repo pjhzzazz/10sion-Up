@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 3542848782855854362}
   - component: {fileID: 2228697933958938617}
   m_Layer: 0
-  m_Name: GemBlue
+  m_Name: Gem_Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
