@@ -4,41 +4,32 @@ using UnityEngine;
 
 public class PressurePlate : MonoBehaviour
 {
-    public enum PlateColor
+    [SerializeField] private Animator animator;
+
+    public PressurePlateActiveBlock.PlateColor SelectedPlateColor;
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        Yellow,
-        Green,
-        Red,
-        Blue
+        animator?.SetBool("isPress", true);
+        SetDoorState(true);
     }
 
-    public PlateColor SelectedPlateColor;
-
-    private void OnCollisionStay2D(Collision2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        ActivateBlock(SelectedPlateColor);
+        animator?.SetBool("isPress", false);
+        SetDoorState(false);
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
+    private void SetDoorState(bool open)
     {
-        DeActivateBlock(SelectedPlateColor);
-    }
-
-    void ActivateBlock(PlateColor color)
-    {
-        var door = GameObject.FindWithTag(color.ToString() + "Door");
-        if (door != null)
+        foreach (var door in FindObjectsOfType<PressurePlateActiveBlock>())
         {
-            door.GetComponent<PressurePlateActiveBlock>().Open();
-        }
-    }
-
-    void DeActivateBlock(PlateColor color)
-    {
-        var door = GameObject.FindWithTag(color.ToString() + "Door");
-        if (door != null)
-        {
-            door.GetComponent<PressurePlateActiveBlock>().Close();
+            if (door.DoorColor == SelectedPlateColor)
+            {
+                if (open)
+                    door.Open();
+                else
+                    door.Close();
+            }
         }
     }
 }

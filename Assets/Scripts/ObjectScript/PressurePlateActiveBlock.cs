@@ -15,15 +15,16 @@ public class PressurePlateActiveBlock : MonoBehaviour
 
     public PlateColor DoorColor;
 
-    private Animator animator;
-    private Collider2D doorCollider;
+    [SerializeField] private Animator animator;
+    [SerializeField] private Collider2D doorCollider;
+
     private bool isOpen = false;
 
     public void Open()
     {
         if (isOpen) return;
         isOpen = true;
-        animator?.SetTrigger("Open");
+        animator?.SetBool("isOpen", true);
         if (doorCollider != null) doorCollider.enabled = false;
     }
 
@@ -31,7 +32,7 @@ public class PressurePlateActiveBlock : MonoBehaviour
     {
         if (!isOpen) return;
         isOpen = false;
-        animator?.SetTrigger("Close");
+        animator?.SetBool("isOpen", false);
         if (doorCollider != null) doorCollider.enabled = true;
     }
 }
