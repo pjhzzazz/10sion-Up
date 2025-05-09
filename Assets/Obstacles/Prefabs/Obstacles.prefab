@@ -87,7 +87,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.52, y: -0.79, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 6, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7577511302055170230}
@@ -133,7 +133,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 617f00d9e8010524c9ae2dff89e4b8dd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 910079b3cd17a2d40a09696c200543ac, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -155,7 +155,8 @@ GameObject:
   - component: {fileID: 2835911524591585109}
   - component: {fileID: 484982984265757222}
   - component: {fileID: 5481333581887416217}
-  - component: {fileID: 269473854398309111}
+  - component: {fileID: 5079812918075508933}
+  - component: {fileID: 6982225699583061116}
   m_Layer: 0
   m_Name: RedLaserHorizontal
   m_TagString: Untagged
@@ -251,7 +252,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &269473854398309111
+--- !u!114 &5079812918075508933
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -260,15 +261,58 @@ MonoBehaviour:
   m_GameObject: {fileID: 1495734755265939948}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35de231c4aebf4440b0ac484a7f74a13, type: 3}
+  m_Script: {fileID: 11500000, guid: 485e779e83a2bc149abbaf0ae1bfe5d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blueLasers:
-  - {fileID: 2053600483428350951}
-  - {fileID: 8277800437521008619}
-  redLasers:
-  - {fileID: 3047465701056330668}
-  - {fileID: 1495734755265939948}
+--- !u!60 &6982225699583061116
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495734755265939948}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.5, y: -0.15714286}
+      - {x: 0.5, y: -0.15714286}
+      - {x: 0.5, y: 0.15714286}
+      - {x: -0.5, y: 0.15714286}
+  m_UseDelaunayMesh: 0
 --- !u!1 &2053600483428350951
 GameObject:
   m_ObjectHideFlags: 0
@@ -280,7 +324,8 @@ GameObject:
   - component: {fileID: 4504270625118026756}
   - component: {fileID: 3794711222343114417}
   - component: {fileID: 5606630418415454152}
-  - component: {fileID: 3779834234465763170}
+  - component: {fileID: 247150578293731101}
+  - component: {fileID: 1387289893652515450}
   m_Layer: 0
   m_Name: BlueLaserHorizontal
   m_TagString: Untagged
@@ -376,7 +421,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &3779834234465763170
+--- !u!114 &247150578293731101
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -385,15 +430,58 @@ MonoBehaviour:
   m_GameObject: {fileID: 2053600483428350951}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35de231c4aebf4440b0ac484a7f74a13, type: 3}
+  m_Script: {fileID: 11500000, guid: 092ebf5f386f796499d19f91cd939a43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blueLasers:
-  - {fileID: 2053600483428350951}
-  - {fileID: 8277800437521008619}
-  redLasers:
-  - {fileID: 3047465701056330668}
-  - {fileID: 1495734755265939948}
+--- !u!60 &1387289893652515450
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2053600483428350951}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.5, y: -0.15714286}
+      - {x: 0.5, y: -0.15714286}
+      - {x: 0.5, y: 0.15714286}
+      - {x: -0.5, y: 0.15714286}
+  m_UseDelaunayMesh: 0
 --- !u!1 &2095853782762722929
 GameObject:
   m_ObjectHideFlags: 0
@@ -677,7 +765,8 @@ GameObject:
   - component: {fileID: 1025296711191188509}
   - component: {fileID: 5725396796517026580}
   - component: {fileID: 743307411930548164}
-  - component: {fileID: 8700847828631254362}
+  - component: {fileID: 5097218626536505357}
+  - component: {fileID: 6164813230243338510}
   m_Layer: 0
   m_Name: RedLaserVertical
   m_TagString: Untagged
@@ -773,7 +862,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &8700847828631254362
+--- !u!114 &5097218626536505357
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -782,15 +871,58 @@ MonoBehaviour:
   m_GameObject: {fileID: 3047465701056330668}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35de231c4aebf4440b0ac484a7f74a13, type: 3}
+  m_Script: {fileID: 11500000, guid: 485e779e83a2bc149abbaf0ae1bfe5d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blueLasers:
-  - {fileID: 2053600483428350951}
-  - {fileID: 8277800437521008619}
-  redLasers:
-  - {fileID: 3047465701056330668}
-  - {fileID: 1495734755265939948}
+--- !u!60 &6164813230243338510
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3047465701056330668}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.15714286, y: -0.5}
+      - {x: 0.15714286, y: 0.5}
+      - {x: -0.15714286, y: 0.5}
+      - {x: -0.15714286, y: -0.5}
+  m_UseDelaunayMesh: 0
 --- !u!1 &4235124149616312186
 GameObject:
   m_ObjectHideFlags: 0
@@ -1234,7 +1366,8 @@ GameObject:
   - component: {fileID: 1651382223131024656}
   - component: {fileID: 1816325932382339613}
   - component: {fileID: 1544685843899161112}
-  - component: {fileID: 4552932010049649670}
+  - component: {fileID: 3227357466641936391}
+  - component: {fileID: 6094789014354853027}
   m_Layer: 0
   m_Name: BlueLaserVertical
   m_TagString: Untagged
@@ -1330,7 +1463,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &4552932010049649670
+--- !u!114 &3227357466641936391
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1339,15 +1472,58 @@ MonoBehaviour:
   m_GameObject: {fileID: 8277800437521008619}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35de231c4aebf4440b0ac484a7f74a13, type: 3}
+  m_Script: {fileID: 11500000, guid: 092ebf5f386f796499d19f91cd939a43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blueLasers:
-  - {fileID: 2053600483428350951}
-  - {fileID: 8277800437521008619}
-  redLasers:
-  - {fileID: 3047465701056330668}
-  - {fileID: 1495734755265939948}
+--- !u!60 &6094789014354853027
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8277800437521008619}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.15714286, y: -0.5}
+      - {x: 0.15714286, y: 0.5}
+      - {x: -0.15714286, y: 0.5}
+      - {x: -0.15714286, y: -0.5}
+  m_UseDelaunayMesh: 0
 --- !u!1 &8426943108759685797
 GameObject:
   m_ObjectHideFlags: 0
