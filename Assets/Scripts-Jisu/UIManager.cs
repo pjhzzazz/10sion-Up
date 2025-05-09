@@ -37,6 +37,10 @@ public class UIManager : MonoBehaviour
 
     private void Start()
     {
+        startObj.SetActive(true);
+        stageObj.SetActive(false);
+        mainObj.SetActive(false);
+
         //½ºÅ¸Æ® ¾À
         startBtn.onClick.AddListener(ToStage);
         startOptionBtn.onClick.AddListener(ShowOptionUI);
