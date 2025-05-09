@@ -6,6 +6,8 @@ TagManager:
   tags:
   - FirePlayer
   - WaterPlayer
+  - RedPlayer
+  - BluePlayer
   layers:
   - Default
   - TransparentFX

@@ -53,14 +53,14 @@ public class GoalDoor : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("WaterPlayer"))
+        if (collision.gameObject.CompareTag("BluePlayer"))
         {
             IsBlueGoal = true;
             //파란 플레이어 사라지게
             PlayerBlue.SetActive(false);
             GoalBlue.SetActive(true);
         }
-        if (collision.gameObject.CompareTag("FirePlayer"))
+        if (collision.gameObject.CompareTag("RedPlayer"))
         {
             IsRedGoal = true;
             //빨간 플레이어 사라지게

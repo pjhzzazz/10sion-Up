@@ -2,15 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GoalDoorKeyBlue : MonoBehaviour
+public class GemRed : MonoBehaviour
 {
-    [SerializeField] private GoalDoor goalDoor;
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("BluePlayer"))
+        if (collision.CompareTag("RedPlayer"))
         {
-            goalDoor.CollectBlueKey();
+            //GameManager.Instance.AddScore(1);
+            //PlusGemScore(); 같은걸로?
+
             Destroy(gameObject);
         }
     }
