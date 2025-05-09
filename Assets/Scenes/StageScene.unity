@@ -364,9 +364,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2526186170733360559, guid: 9f95aaa3953956e438770b6991273176, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5883520064278985166, guid: 9f95aaa3953956e438770b6991273176, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6807241752186119021, guid: 9f95aaa3953956e438770b6991273176, type: 3}
       propertyPath: m_Name
       value: StageManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 7913480263496121573, guid: 9f95aaa3953956e438770b6991273176, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7938938362542430982, guid: 9f95aaa3953956e438770b6991273176, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314103474528903754, guid: 9f95aaa3953956e438770b6991273176, type: 3}
       propertyPath: m_LocalPosition.x
@@ -406,6 +422,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8314103474528903754, guid: 9f95aaa3953956e438770b6991273176, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9130971820958316366, guid: 9f95aaa3953956e438770b6991273176, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
