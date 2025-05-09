@@ -8,14 +8,18 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     [Header("½ºÅ¸Æ® ¾À")]
+    public GameObject startObj;
     [SerializeField] private Button startBtn;
     [SerializeField] private Button startOptionBtn;
 
     [Header("½ºÅ×ÀÌÁö ¾À")]
+    public GameObject stageObj;
+
     public List<Button> stageButtons;
 
 
     [Header("¸ÞÀÎ ¾À")]
+    public GameObject mainObj;
     [SerializeField] private GameObject gameOverImg;
     [SerializeField] private GameObject optionImg;
     [SerializeField] private GameObject nextStageImg;
@@ -23,9 +27,13 @@ public class UIManager : MonoBehaviour
     [SerializeField] private Button mainOptionBtn;
     [SerializeField] private Button resumeBtn;
     [SerializeField] private Button retryBtn;
+    [SerializeField] private Button retryBtn2;
     [SerializeField] private Button mainMenuBtn;
     [SerializeField] private Button EndBtn;
     [SerializeField] private Button continueBtn;
+
+    [Header("º°")]
+    [SerializeField] private Image[] starImg;
 
     private void Start()
     {
@@ -38,7 +46,7 @@ public class UIManager : MonoBehaviour
         {
             int index = i;
             stageButtons[i].onClick.AddListener(() => SelectedStage(index));
-            stageButtons[i].interactable = ( i <= stageButtons.Count + 1 );
+            stageButtons[i].interactable = ( i <= GameManager.gameManager.ClearedStage);
         }
 
         //¸ÞÀÎ ¾À
@@ -49,6 +57,7 @@ public class UIManager : MonoBehaviour
         mainOptionBtn.onClick.AddListener(ShowOptionUI);
         resumeBtn.onClick.AddListener(GamePlay);
         retryBtn.onClick.AddListener(Restart);
+        retryBtn2.onClick.AddListener(Restart);
         mainMenuBtn.onClick.AddListener(ToStage);
         EndBtn.onClick.AddListener(ToStartMenu);
         continueBtn.onClick.AddListener(Continue);
@@ -85,11 +94,17 @@ public class UIManager : MonoBehaviour
     public void ToStage()
     {
         SceneManagement.sceneManager.ToStageScene();
+        startObj.SetActive(false);
+        stageObj.SetActive(true);
+        mainObj.SetActive(false);
     }
 
     public void ToStartMenu()
     {
         SceneManagement.sceneManager.ToStartScene();
+        startObj.SetActive(true);
+        stageObj.SetActive(false);
+        mainObj.SetActive(false);
     }
 
     public void Continue()
@@ -101,5 +116,16 @@ public class UIManager : MonoBehaviour
     {
         StageManager.stageManager.SpawnCharacters(stage);
         SceneManagement.sceneManager.ToMainScene();
+        startObj.SetActive(false);
+        stageObj.SetActive(false);
+        mainObj.SetActive(true);
+    }
+
+    public void ShowStars(int stars)
+    {
+        for (int i = 0; i < starImg.Length; i++)
+        {
+            starImg[i].enabled = i < stars;
+        }
     }
 }

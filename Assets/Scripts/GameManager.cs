@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using Unity.PlasticSCM.Editor.WebApi;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager gameManager { get; private set; }
 
     [SerializeField] private UIManager uiManager;
+
+    public int stars { get; private set;}
 
     public int ClearedStage { get; private set; }
 
@@ -50,8 +53,20 @@ public class GameManager : MonoBehaviour
         uiManager.GameOverUI();
     }
 
-    public void AddScore()
+    public void NumberOfStar(float jewelTotal, float gainedJewel, float timeTotal, float takingTime)
     {
+        float jewelRate = gainedJewel / jewelTotal;
+        float timeRate = (timeTotal / 5) / takingTime;
+        timeRate = Mathf.Min(timeRate, 1f);
 
+        float point = jewelRate * 0.5f + timeRate * 0.5f;
+
+        if (point > 0.8f) stars = 5;
+        else if (point > 0.6f) stars = 4;
+        else if (point > 0.4f) stars = 3;
+        else if (point > 0.2f) stars = 2;
+        else stars = 1;
+
+        uiManager.ShowStars(stars);
     }
 }
