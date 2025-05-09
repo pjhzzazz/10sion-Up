@@ -13,7 +13,8 @@ public class GameManager : MonoBehaviour
 
     public int stars { get; private set;}
 
-    public int ClearedStage { get; private set; }
+    public int SelectedStageIndex { get; set; } = 0;
+    public int ClearedStage = 0;
 
     private void Awake()
     {
@@ -28,14 +29,14 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        ClearedStage = SaveSystem.GetClearedStage();
+        ClearedStage = SaveSystem.GetClearedStage(); // 불러오기
         MainMenu();
     }
 
-    public void SaveStageClear(int stage)
+    public void SaveStageClear(int stageIndex) // 저장
     {
-        SaveSystem.SaveClearedStage(stage); // PlayerPrefs 저장
-        ClearedStage = Mathf.Max(ClearedStage, stage); // 최신 상태로 반영
+        SaveSystem.SaveClearedStage(stageIndex);
+        ClearedStage = Mathf.Max(ClearedStage, stageIndex);
     }
 
     public void MainMenu() //시작
@@ -43,7 +44,7 @@ public class GameManager : MonoBehaviour
         SceneManagement.sceneManager.ToStartScene();
     }
 
-    public void NextStage() //성공 시 다음 스테이지 이동 UI
+    public void Success() //성공 시 UI
     {
         uiManager.ShowNextStageUI();
     }
@@ -53,10 +54,11 @@ public class GameManager : MonoBehaviour
         uiManager.GameOverUI();
     }
 
-    public void NumberOfStar(float jewelTotal, float gainedJewel, float timeTotal, float takingTime)
+    public void NumberOfStar(float totalJewel, float gainedJewel, float takingTime) //별 개수 계산
     {
-        float jewelRate = gainedJewel / jewelTotal;
-        float timeRate = (timeTotal / 5) / takingTime;
+
+        float jewelRate = gainedJewel / totalJewel;
+        float timeRate = 40 / takingTime;
         timeRate = Mathf.Min(timeRate, 1f);
 
         float point = jewelRate * 0.5f + timeRate * 0.5f;

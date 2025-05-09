@@ -129,14 +129,9 @@ public class UIManager : MonoBehaviour
         stageManager.ToNextStage();
     }
 
-    public void SelectedStage(int stage)
+    public void SelectedStage(int stageIndex) //스테이지 선택 시
     {
-        StageManager manager = FindObjectOfType<StageManager>();
-        if (manager != null)
-        {
-            manager.currentStage = stage; // 어떤 스테이지를 로드할지 미리 설정만
-        }
-
+        GameManager.gameManager.SelectedStageIndex = stageIndex;
         SceneManagement.sceneManager.ToMainScene();
     }
 

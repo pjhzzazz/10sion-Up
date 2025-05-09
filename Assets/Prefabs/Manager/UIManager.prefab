@@ -1458,7 +1458,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3504029638273572947}
-  - component: {fileID: 1826881627147846699}
+  - component: {fileID: 5498850523425933327}
   m_Layer: 0
   m_Name: UIManager
   m_TagString: Untagged
@@ -1482,7 +1482,7 @@ Transform:
   - {fileID: 3935548516476624610}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1826881627147846699
+--- !u!114 &5498850523425933327
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1491,7 +1491,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4081891559101418043}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b47c69ad50062fa428d29879336506d9, type: 3}
+  m_Script: {fileID: 11500000, guid: c1e99ce10eb52494a9e4b5bfe1160ddf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   stageManager: {fileID: 6951992770821108590, guid: 9f95aaa3953956e438770b6991273176, type: 3}
@@ -1512,7 +1512,7 @@ MonoBehaviour:
   retryBtn: {fileID: 5891398131685473757}
   retryBtn2: {fileID: 5899063691247972009}
   mainMenuBtn: {fileID: 8512679188447145528}
-  EndBtn: {fileID: 4713043216346747061}
+  EndBtn: {fileID: 2844458861254488923}
   continueBtn: {fileID: 2844458861254488923}
   starImg:
   - {fileID: 5244492818743929622}
