@@ -17,7 +17,7 @@ public class BlueLaser : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("FirePlayer"))
+        if (other.CompareTag("RedPlayer"))
         {
             Debug.Log("FirePlayer Á×À½");
             

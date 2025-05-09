@@ -22,7 +22,7 @@ public class BlueLaserButtonTrigger : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         //파란색 레이저 제어
-        if (other.CompareTag("WaterPlayer"))    
+        if (other.CompareTag("BluePlayer"))    
         {
             isTrigger = !isTrigger;
             animator.SetBool("isTrigger", isTrigger);//스위치 애니메이션 작동

@@ -3,7 +3,7 @@ using UnityEngine;
 public class RepeatingSpikeTop : MonoBehaviour
 {
     public float interval = 2f;
-    public Rigidbody2D rigidbody2D;
+    public Rigidbody2D _rigidbody2D;
     private float timer = 0f;
     private bool playerInside = false;
 
@@ -21,7 +21,7 @@ public class RepeatingSpikeTop : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("FirePlayer") || other.CompareTag("WaterPlayer"))
+        if (other.CompareTag("RedPlayer") || other.CompareTag("BluePlayer"))
         {
             playerInside = true;
             timer = interval; // 입장하자마자 바로 한 번 떨어뜨리기
@@ -30,7 +30,7 @@ public class RepeatingSpikeTop : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("FirePlayer") || other.CompareTag("WaterPlayer"))
+        if (other.CompareTag("RedPlayer") || other.CompareTag("BluePlayer"))
         {
             playerInside = false;
             timer = 0f;

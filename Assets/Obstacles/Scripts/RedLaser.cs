@@ -18,7 +18,7 @@ public class RedLaser : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("WaterPlayer"))
+        if (other.CompareTag("BluePlayer"))
         {
             Debug.Log("WaterPlayer°¡ Á×À½");
            
