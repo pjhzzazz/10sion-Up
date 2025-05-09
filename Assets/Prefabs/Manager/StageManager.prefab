@@ -371,15 +371,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 6807241752186119021}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2548266109848f74c9ba84650212daec, type: 3}
+  m_Script: {fileID: 11500000, guid: b6e4dd9a3267cf641ade0974a5a316fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   fireboyPrefab: {fileID: 6171298129891913142, guid: e2499372b51beb24398329c3dc3fec36, type: 3}
   watergirlPrefab: {fileID: 3292704025467702349, guid: cf74d5d5f2c22624e87a07ba0c65a9fe, type: 3}
   stageParents:
-  - {fileID: 4343105917760522914}
-  - {fileID: 3892004551244042385}
-  - {fileID: 4932580674120489957}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   currentStage: 0
 --- !u!1 &7628730265135571904
 GameObject:
