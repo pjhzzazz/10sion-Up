@@ -17,6 +17,6 @@ public class SaveSystem : MonoBehaviour
 
     public static int GetClearedStage()
     {
-        return PlayerPrefs.GetInt("ClearStage", - 1);
+        return PlayerPrefs.GetInt("ClearStage", 0);
     }
 }

@@ -7,8 +7,6 @@ public class SceneManagement : MonoBehaviour
 {
     public static SceneManagement sceneManager {  get; private set; }
 
-    private UIManager uiManager;
-
     private void Awake()
     {
         if (sceneManager != null)
