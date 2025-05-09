@@ -43,8 +43,7 @@ public class Player : MonoBehaviour
 
     private void Movment(Vector2 direction)
     {
-        direction = direction * 5;
-
+        direction = new Vector2(direction.x * 5f, _rigidbody.velocity.y);
         _rigidbody.velocity = direction;
         animationHandler.Move(direction);
     }
