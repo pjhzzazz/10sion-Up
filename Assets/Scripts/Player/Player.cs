@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public enum PlayerType { Fire, Water }
+    public PlayerType playerType;
+
     protected Rigidbody2D _rigidbody;
     protected AnimationHandler animationHandler;
 
@@ -43,8 +46,7 @@ public class Player : MonoBehaviour
 
     private void Movment(Vector2 direction)
     {
-        direction = direction * 5;
-
+        direction = new Vector2(direction.x * 5f, _rigidbody.velocity.y);
         _rigidbody.velocity = direction;
         animationHandler.Move(direction);
     }
@@ -54,7 +56,33 @@ public class Player : MonoBehaviour
         if (transform.position.y < minY)
         {
             transform.position = new Vector3(transform.position.x, minY, transform.position.z);
-            _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, 0f); // 중력 제거
+            _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, 0f);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (playerType == PlayerType.Fire)
+        {
+            if (collision.CompareTag("Ice"))
+            {
+                Destroy(collision.gameObject); // 얼음 파괴
+            }
+            else if (collision.CompareTag("FireObstacle"))
+            {
+                // 통과 허용 또는 무시
+            }
+        }
+        else if (playerType == PlayerType.Water)
+        {
+            if (collision.CompareTag("WaterObstacle"))
+            {
+                // 통과 허용 또는 무시
+            }
+            else if (collision.CompareTag("Fire"))
+            {
+                Destroy(collision.gameObject); // 불 파괴
+            }
         }
     }
 }
