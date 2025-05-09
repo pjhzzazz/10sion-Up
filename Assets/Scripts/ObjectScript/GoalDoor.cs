@@ -58,12 +58,14 @@ public class GoalDoor : MonoBehaviour
             IsBlueGoal = true;
             //파란 플레이어 사라지게
             PlayerBlue.SetActive(false);
+            GoalBlue.SetActive(true);
         }
         if (collision.gameObject.CompareTag("FirePlayer"))
         {
             IsRedGoal = true;
             //빨간 플레이어 사라지게
             PlayerRed.SetActive(false);
+            GoalRed.SetActive(true);
         }
     }
 
