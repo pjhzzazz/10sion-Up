@@ -30,6 +30,11 @@ public class AnimationHandler : MonoBehaviour
         animator.SetBool(IsJump, true);
     }
 
+    public void Land()
+    {
+        animator.SetBool(IsJump, false);
+    }
+
     public void InvincibilityEnd()
     {
         animator.SetBool(IsDie, false);

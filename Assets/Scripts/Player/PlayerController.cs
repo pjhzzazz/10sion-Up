@@ -49,6 +49,7 @@ public class PlayerController : Player
         {
             _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, jumpForce);
             isJumping = true;
+            animationHandler.Jump();
         }
     }
 
@@ -57,6 +58,7 @@ public class PlayerController : Player
         if (collision.gameObject.CompareTag("Ground"))
         {
             isJumping = false;
+            animationHandler.Land();
         }
     }
 
