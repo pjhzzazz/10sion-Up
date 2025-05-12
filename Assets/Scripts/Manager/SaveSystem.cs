@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 
 public class SaveSystem : MonoBehaviour
@@ -8,9 +9,10 @@ public class SaveSystem : MonoBehaviour
 
     public static void SaveClearedStage(int stageIndex, int stars) // ÀúÀå
     {
-        if (stageIndex > GetClearedStage())
+
+        if (stageIndex >= GetClearedStage())
         {
-            PlayerPrefs.SetInt("ClearStage", stageIndex);
+            PlayerPrefs.SetInt("ClearStage", stageIndex + 1);
             PlayerPrefs.Save();
         }
 

@@ -31,11 +31,15 @@ public class Player : MonoBehaviour
 
     protected virtual void Update()
     {
+        if (GameManager.gameManager.IsPaused)
+            return;
         HandleAction();
     }
     
     protected virtual void FixedUpdate()
     {
+        if (GameManager.gameManager.IsPaused)
+            return;
         Movment(movementDirection);
     }
   
