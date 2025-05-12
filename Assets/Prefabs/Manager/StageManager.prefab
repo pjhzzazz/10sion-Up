@@ -12348,7 +12348,7 @@ MonoBehaviour:
   RedPlayerPrefab: {fileID: 6171298129891913142, guid: 5b999b78504cd1241a92a57e8530f699, type: 3}
   BluePlayerPrefab: {fileID: 3292704025467702349, guid: b13395b9b1976004886b4b88aa3d47cd, type: 3}
   stageParents:
-  - {fileID: 965709299802924459}
+  - {fileID: 5155792170854105042, guid: 3cfa29cc7cec9684680b0142b9a932aa, type: 3}
   - {fileID: 2437706415987382756}
   - {fileID: 289536657639448944}
   currentStage: 0
