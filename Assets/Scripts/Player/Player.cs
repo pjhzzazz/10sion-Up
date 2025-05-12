@@ -16,8 +16,6 @@ public class Player : MonoBehaviour
     protected Vector2 lookDirection = Vector2.zero;
     public Vector2 LookDirection { get { return lookDirection; } }
 
-    //private float minY = -4.6f;
-
     protected virtual void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
@@ -54,16 +52,7 @@ public class Player : MonoBehaviour
         _rigidbody.velocity = direction;
         animationHandler.Move(direction);
     }
-    /*
-    void LateUpdate()
-    {
-        if (transform.position.y < minY)
-        {
-            transform.position = new Vector3(transform.position.x, minY, transform.position.z);
-            _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, 0f);
-        }
-    }
-    */
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (playerType == PlayerType.Fire)
@@ -87,6 +76,14 @@ public class Player : MonoBehaviour
             {
                 Destroy(collision.gameObject); // ºÒ ÆÄ±«
             }
+        }
+    }
+
+    public virtual void Death()
+    {
+        if (transform.position.y < -6f)
+        {
+            Death();
         }
     }
 }
