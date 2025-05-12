@@ -10,14 +10,14 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager gameManager { get; private set; }
 
-    public int stars { get; private set;}
+    public int stars { get; private set; }
 
     public int SelectedStageIndex { get; set; } = 0;
     public int ClearedStage = 0;
 
     public float playTime = 0;
     private float gainedGem = 0;
-    
+
     public bool IsPaused = false;
 
     private void Awake()
@@ -28,12 +28,9 @@ public class GameManager : MonoBehaviour
             return;
         }
         gameManager = this;
-        DontDestroyOnLoad(gameObject); 
-    }
+        DontDestroyOnLoad(gameObject);
 
-    private void Start()
-    {
-        ClearedStage = SaveSystem.GetClearedStage(); // 불러오기
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     private void Update()
@@ -44,7 +41,7 @@ public class GameManager : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {
-                Success();
+            Success();
         }
     }
 
@@ -57,7 +54,6 @@ public class GameManager : MonoBehaviour
 
     public void Success() //성공 시 UI
     {
-        Debug.Log($"[Success 호출 시점] SelectedStageIndex = {SelectedStageIndex}, ClearedStage = {ClearedStage}");
         NumberOfStar(gainedGem, playTime);
         SaveStageClear(SelectedStageIndex);
         UIManager.uIManager.ShowNextStageUI();
@@ -78,6 +74,25 @@ public class GameManager : MonoBehaviour
     {
         gainedGem += Gem;
     }
+
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name == "StageSelectScene")
+        {
+            ClearedStage = SaveSystem.GetClearedStage();
+        }
+    }
+
     public void SaveStageClear(int stageIndex) // 저장
     {
         SaveSystem.SaveClearedStage(stageIndex, stars);

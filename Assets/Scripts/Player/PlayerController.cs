@@ -13,7 +13,6 @@ public class PlayerController : Player
 
     protected override void HandleAction()
     {
-        
         float vertical = 0f;
         float horizontal = Input.GetAxisRaw("Horizontal");
         movementDirection = new Vector2(horizontal, 0).normalized;
