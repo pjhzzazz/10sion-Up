@@ -121,7 +121,7 @@ GameObject:
   - component: {fileID: 8661697256193346407}
   m_Layer: 7
   m_Name: RedPlayer
-  m_TagString: Player
+  m_TagString: RedPlayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerType: 0
-  controlType: 0
+  controlType: 1
   jumpForce: 5
 --- !u!114 &2439728858739371985
 MonoBehaviour:

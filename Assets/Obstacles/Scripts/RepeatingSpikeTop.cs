@@ -2,43 +2,27 @@ using UnityEngine;
 
 public class RepeatingSpikeTop : MonoBehaviour
 {
-    public float interval = 2f;
-    public Rigidbody2D _rigidbody2D;
-    private float timer = 0f;
-    private bool playerInside = false;
+    private float spawnTime;
 
+    private void Start()
+    {
+        spawnTime = Time.time;  
+    }
     void Update()
     {
-        if (!playerInside) return;
+        
+    }
 
-        timer += Time.deltaTime;
-        if (timer >= interval)
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("RedPlayer") || collision.gameObject.CompareTag("BluePlayer"))
         {
-            SpawnSpike();
-            timer = 0f;
+            Destroy(collision.gameObject);
+        }
+        else if (Time.time - spawnTime > 0.5f && collision.gameObject.CompareTag("Ground"))
+        {
+            Destroy(gameObject);
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("RedPlayer") || other.CompareTag("BluePlayer"))
-        {
-            playerInside = true;
-            timer = interval; // 입장하자마자 바로 한 번 떨어뜨리기
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag("RedPlayer") || other.CompareTag("BluePlayer"))
-        {
-            playerInside = false;
-            timer = 0f;
-        }
-    }
-
-    void SpawnSpike()
-    {
-        Instantiate(this, transform.position, Quaternion.identity);
-    }
 }
