@@ -94,8 +94,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DoorColor: 0
-  animator: {fileID: 0}
-  doorCollider: {fileID: 0}
+  animator: {fileID: 5886900291573885743}
+  doorCollider: {fileID: 5648873652354800219}
 --- !u!95 &5886900291573885743
 Animator:
   serializedVersion: 5
