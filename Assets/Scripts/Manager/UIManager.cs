@@ -1,124 +1,179 @@
-using System.Collections;
+Ôªøusing System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SocialPlatforms.Impl;
 using TMPro;
 using UnityEngine.UI;
+using System;
 
 public class UIManager : MonoBehaviour
 {
+    public static UIManager uIManager;
     public StageManager stageManager;
 
+    [SerializeField] private Button ResetBtn;
 
-
-    [Header("Ω∫≈∏∆Æ æ¿")]
+    [Header("Ïä§ÌÉÄÌä∏ Ïî¨")]
     public GameObject startObj;
     [SerializeField] private Button startBtn;
     [SerializeField] private Button startOptionBtn;
 
-    [Header("Ω∫≈◊¿Ã¡ˆ æ¿")]
-    public GameObject stageObj;
+    [Header("Ïä§ÌÖåÏù¥ÏßÄ Ïî¨")]
+    public GameObject stageSelectObj;
+    [SerializeField] private Button backBtn;
+    [SerializeField] private List<Button> stageButtons;
 
-    public List<Button> stageButtons;
-
-
-    [Header("∏ﬁ¿Œ æ¿")]
+    [Header("Î©îÏù∏ Ïî¨")]
     public GameObject mainObj;
-    [SerializeField] private GameObject gameOverImg;
+    [SerializeField] private GameObject FailureImg;
     [SerializeField] private GameObject optionImg;
-    [SerializeField] private GameObject nextStageImg;
+    [SerializeField] private GameObject SuccessImg;
 
+    [SerializeField] private TextMeshProUGUI timeTxt;
     [SerializeField] private Button mainOptionBtn;
     [SerializeField] private Button resumeBtn;
-    [SerializeField] private Button retryBtn;
-    [SerializeField] private Button retryBtn2;
+    [SerializeField] private Button OptionRetryBtn;
     [SerializeField] private Button mainMenuBtn;
+    [SerializeField] private Button FailureRetryBtn;
     [SerializeField] private Button EndBtn;
     [SerializeField] private Button continueBtn;
 
-    [Header("∫∞")]
-    [SerializeField] private Image[] starImg;
+    [Header("Î≥Ñ")]
+    public GameObject[] starObjects;
+
+    void Awake()
+    {
+        if (uIManager != null && uIManager != this)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+        uIManager = this;
+    }
 
     private void Start()
     {
+        ResetBtn.onClick.AddListener(ResetSaveData);
+
         string currentScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+
+        // Ïî¨Ïóê Îî∞Î•∏ UI ÌôúÏÑ±Ìôî
         if (currentScene == "StartScene")
         {
             startObj.SetActive(true);
-            stageObj.SetActive(false);
+            stageSelectObj.SetActive(false);
             mainObj.SetActive(false);
+
+            startBtn.onClick.AddListener(ToStageSelect);
+            startOptionBtn.onClick.AddListener(ShowOptionUI);
         }
-        else if (currentScene == "StageScene")
+        else if (currentScene == "StageSelectScene")
         {
             startObj.SetActive(false);
-            stageObj.SetActive(true);
+            stageSelectObj.SetActive(true);
             mainObj.SetActive(false);
+
+            backBtn.onClick.AddListener(ToStartMenu);
+
+            for (int i = 0; i < stageButtons.Count; i++)
+            {
+                int index = i;
+                stageButtons[i].onClick.AddListener(() => SelectedStage(index));
+                stageButtons[i].interactable = (i <= GameManager.gameManager.ClearedStage);
+
+                Transform starParent = stageButtons[i].transform.Find("StarUI");
+
+                GameObject[] stars = new GameObject[5];
+                for (int j = 0; j < 5; j++)
+                {
+                    stars[j] = starParent.Find($"Star{j + 1}").gameObject;
+                }
+
+                int savedStars = SaveSystem.GetStars(i);
+                ShowStars(stars, savedStars);
+            }
         }
         else if (currentScene == "MainScene")
         {
             startObj.SetActive(false);
-            stageObj.SetActive(false);
+            stageSelectObj.SetActive(false);
             mainObj.SetActive(true);
+
+            mainOptionBtn.onClick.AddListener(ShowOptionUI);
+            resumeBtn.onClick.AddListener(Resume);
+            OptionRetryBtn.onClick.AddListener(Restart);
+            FailureRetryBtn.onClick.AddListener(Restart);
+            mainMenuBtn.onClick.AddListener(ToStageSelect);
+            EndBtn.onClick.AddListener(ToStageSelect);
+            continueBtn.onClick.AddListener(Continue);
         }
 
-            //Ω∫≈∏∆Æ æ¿
-            startBtn.onClick.AddListener(ToStage);
-        startOptionBtn.onClick.AddListener(ShowOptionUI);
-
-        //Ω∫≈◊¿Ã¡ˆ æ¿
-        for (int i = 0; i < stageButtons.Count; i++)
-        {
-            int index = i;
-            stageButtons[i].onClick.AddListener(() => SelectedStage(index));
-            stageButtons[i].interactable = ( i <= GameManager.gameManager.ClearedStage);
-        }
-
-        //∏ﬁ¿Œ æ¿
-        gameOverImg.SetActive(false);
+        FailureImg.SetActive(false);
         optionImg.SetActive(false);
-        nextStageImg.SetActive(false);
-
-        mainOptionBtn.onClick.AddListener(ShowOptionUI);
-        resumeBtn.onClick.AddListener(GamePlay);
-        retryBtn.onClick.AddListener(Restart);
-        retryBtn2.onClick.AddListener(Restart);
-        mainMenuBtn.onClick.AddListener(ToStage);
-        EndBtn.onClick.AddListener(ToStartMenu);
-        continueBtn.onClick.AddListener(Continue);
-
+        SuccessImg.SetActive(false);
     }
 
-    // UI ≥™≈∏≥™±‚
+    private void Update()
+    {
+        if (mainObj.activeSelf && !optionImg.activeSelf && !FailureImg.activeSelf && !SuccessImg.activeSelf)
+        {
+            int showPlayTime = (int)GameManager.gameManager.playTime;
+            int minutes = showPlayTime / 60;
+            int seconds = showPlayTime % 60;
+            timeTxt.text = $"{minutes:D2}:{seconds:D2}";
+        }
+    }
+
+    public void ShowStars(GameObject[] starObjects, int stars)
+    {
+        for (int i = 0; i < starObjects.Length; i++)
+        {
+            Transform emptyStar = starObjects[i].transform.Find("EmptyStar");
+            Transform fullStar = starObjects[i].transform.Find($"Star");
+
+            bool isShowStar = i < stars;
+            {
+                emptyStar.gameObject.SetActive(!isShowStar);
+                fullStar.gameObject.SetActive(isShowStar);
+            }
+        }
+    }
+
+    // UI ÎÇòÌÉÄÎÇòÍ∏∞
     public void ShowOptionUI()
     {
+        GameManager.gameManager.PauseTime(true);
         optionImg.SetActive(true);
     }
 
     public void GameOverUI()
     {
-        gameOverImg.SetActive(true);
+        GameManager.gameManager.PauseTime(true);
+        FailureImg.SetActive(true);
     }
 
     public void ShowNextStageUI()
     {
-        nextStageImg.SetActive(true);
+        SuccessImg.SetActive(true);
+        GameManager.gameManager.PauseTime(true);
     }
 
-    // UIæ» πˆ∆∞ ¥©∏¶ Ω√
-    public void GamePlay()
+    // UIÏïà Î≤ÑÌäº ÎàÑÎ•º Ïãú
+    public void Resume()
     {
         optionImg.SetActive(false);
+        GameManager.gameManager.PauseTime(false);
     }
 
     public void Restart()
     {
         stageManager.SpawnCharacters(stageManager.currentStage);
         optionImg.SetActive(false);
+        GameManager.gameManager.ResetStage();
     }
 
-    public void ToStage()
+    public void ToStageSelect()
     {
-        SceneManagement.sceneManager.ToStageScene();
+        SceneManagement.sceneManager.ToStageSelectScene();
     }
 
     public void ToStartMenu()
@@ -129,19 +184,20 @@ public class UIManager : MonoBehaviour
     public void Continue()
     {
         stageManager.ToNextStage();
+        SuccessImg.SetActive(false);
+        GameManager.gameManager.ResetStage();
     }
 
-    public void SelectedStage(int stageIndex) //Ω∫≈◊¿Ã¡ˆ º±≈√ Ω√
+    public void SelectedStage(int stageIndex)
     {
         GameManager.gameManager.SelectedStageIndex = stageIndex;
+        GameManager.gameManager.ResetStage();
         SceneManagement.sceneManager.ToMainScene();
     }
 
-    public void ShowStars(int stars)
+    public void ResetSaveData()
     {
-        for (int i = 0; i < starImg.Length; i++)
-        {
-            starImg[i].enabled = i < stars;
-        }
+        PlayerPrefs.DeleteAll();
+        PlayerPrefs.Save();
     }
 }

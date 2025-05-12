@@ -22,9 +22,9 @@ public class SceneManagement : MonoBehaviour
         SceneManager.LoadScene("StartScene");
     }
 
-    public void ToStageScene()
+    public void ToStageSelectScene()
     {
-        SceneManager.LoadScene("StageScene");
+        SceneManager.LoadScene("StageSelectScene");
     }
 
     public void ToMainScene()
