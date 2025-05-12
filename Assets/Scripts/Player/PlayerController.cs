@@ -25,7 +25,7 @@ public class PlayerController : Player
 
             if (Input.GetKeyDown(KeyCode.W) && isGrounded)
             {
-                Debug.Log("W key pressed");
+
                 Jump();
             }
         }
@@ -55,8 +55,8 @@ public class PlayerController : Player
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("¿Ö ¾ÈµÊ");
- 
+
+
         if (collision.gameObject.CompareTag("Ground"))
         {
             isJumping = false;
