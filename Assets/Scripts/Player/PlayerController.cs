@@ -12,6 +12,7 @@ public class PlayerController : Player
     private bool isJumping = false;
 
 
+
     protected override void HandleAction()
     {
         float vertical = 0f;
@@ -77,4 +78,9 @@ public class PlayerController : Player
         isGrounded = false;
     }
 
+    public override void Death()
+    {
+        base.Death();
+        GameManager.gameManager.GameOver();
+    }
 }

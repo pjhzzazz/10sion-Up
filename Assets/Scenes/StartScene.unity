@@ -193,17 +193,9 @@ PrefabInstance:
       value: UIManager
       objectReference: {fileID: 0}
     - target: {fileID: 3885829613213686257, guid: c2f30873aa70ea44a841335ae17f4082, type: 3}
-      propertyPath: startBtn
+      propertyPath: stageManager
       value: 
-      objectReference: {fileID: 959626371}
-    - target: {fileID: 3885829613213686257, guid: c2f30873aa70ea44a841335ae17f4082, type: 3}
-      propertyPath: startObj
-      value: 
-      objectReference: {fileID: 959626372}
-    - target: {fileID: 3885829613213686257, guid: c2f30873aa70ea44a841335ae17f4082, type: 3}
-      propertyPath: startOptionBtn
-      value: 
-      objectReference: {fileID: 959626370}
+      objectReference: {fileID: 7067682493923462662, guid: 9f95aaa3953956e438770b6991273176, type: 3}
     - target: {fileID: 6744652920132463549, guid: c2f30873aa70ea44a841335ae17f4082, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -249,33 +241,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2f30873aa70ea44a841335ae17f4082, type: 3}
---- !u!114 &959626370 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 95492783795277141, guid: c2f30873aa70ea44a841335ae17f4082, type: 3}
-  m_PrefabInstance: {fileID: 959626369}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &959626371 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4209050109596586979, guid: c2f30873aa70ea44a841335ae17f4082, type: 3}
-  m_PrefabInstance: {fileID: 959626369}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &959626372 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2085633626109603938, guid: c2f30873aa70ea44a841335ae17f4082, type: 3}
-  m_PrefabInstance: {fileID: 959626369}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1789102056
 GameObject:
   m_ObjectHideFlags: 0
