@@ -55,8 +55,6 @@ public class PlayerController : Player
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("¿Ö ¾ÈµÊ");
- 
         if (collision.gameObject.CompareTag("Ground"))
         {
             isJumping = false;

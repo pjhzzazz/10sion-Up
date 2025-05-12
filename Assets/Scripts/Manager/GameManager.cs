@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.PlasticSCM.Editor.WebApi;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.SocialPlatforms.Impl;
@@ -9,12 +10,15 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager gameManager { get; private set; }
 
-    [SerializeField] private UIManager uiManager;
-
     public int stars { get; private set;}
 
     public int SelectedStageIndex { get; set; } = 0;
     public int ClearedStage = 0;
+
+    public float playTime = 0;
+    private float gainedGem = 0;
+    
+    public bool IsPaused = false;
 
     private void Awake()
     {
@@ -30,34 +34,59 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         ClearedStage = SaveSystem.GetClearedStage(); // 불러오기
-        MainMenu();
     }
 
-    public void SaveStageClear(int stageIndex) // 저장
+    private void Update()
     {
-        SaveSystem.SaveClearedStage(stageIndex);
-        ClearedStage = Mathf.Max(ClearedStage, stageIndex);
+        if (SceneManager.GetActiveScene().name == "MainScene" && !IsPaused)
+        {
+            playTime += Time.deltaTime;
+        }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+                Success();
+        }
     }
 
-    public void MainMenu() //시작
+    public void ResetStage()
     {
-        SceneManagement.sceneManager.ToStartScene();
+        playTime = 0;
+        gainedGem = 0;
+        PauseTime(false);
     }
 
     public void Success() //성공 시 UI
     {
-        uiManager.ShowNextStageUI();
+        Debug.Log($"[Success 호출 시점] SelectedStageIndex = {SelectedStageIndex}, ClearedStage = {ClearedStage}");
+        NumberOfStar(gainedGem, playTime);
+        SaveStageClear(SelectedStageIndex);
+        UIManager.uIManager.ShowNextStageUI();
+        UIManager.uIManager.ShowStars(UIManager.uIManager.starObjects, stars);
     }
 
     public void GameOver() //캐릭터 죽을 시 UI
     {
-        uiManager.GameOverUI();
+        UIManager.uIManager.GameOverUI();
     }
 
-    public void NumberOfStar(float totalJewel, float gainedJewel, float takingTime) //별 개수 계산
+    public void PauseTime(bool stop)
     {
+        IsPaused = stop;
+    }
 
-        float jewelRate = gainedJewel / totalJewel;
+    public void AddGem(float Gem)
+    {
+        gainedGem += Gem;
+    }
+    public void SaveStageClear(int stageIndex) // 저장
+    {
+        SaveSystem.SaveClearedStage(stageIndex, stars);
+        ClearedStage = Mathf.Max(ClearedStage, stageIndex);
+    }
+
+    public void NumberOfStar(float gainedGem, float takingTime) //별 개수 계산
+    {
+        float jewelRate = gainedGem / 10;
         float timeRate = 40 / takingTime;
         timeRate = Mathf.Min(timeRate, 1f);
 
@@ -69,6 +98,6 @@ public class GameManager : MonoBehaviour
         else if (point > 0.2f) stars = 2;
         else stars = 1;
 
-        uiManager.ShowStars(stars);
+        UIManager.uIManager.ShowStars(UIManager.uIManager.starObjects, stars);
     }
 }
