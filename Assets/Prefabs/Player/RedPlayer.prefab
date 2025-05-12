@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerType: 0
-  controlType: 1
+  controlType: 0
   jumpForce: 5
 --- !u!114 &2439728858739371985
 MonoBehaviour:

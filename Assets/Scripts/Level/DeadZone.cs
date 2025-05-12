@@ -17,7 +17,7 @@ public class DeadZone : MonoBehaviour
                 HandleDeath(collision);
             }
         }
-        // Case 2: RedDeadZone은 FirePlayer만
+        // Case 2: RedDeadZone은 RedPlayer만
         else if (layer == LayerMask.NameToLayer("RedDeadZone"))
         {
             if (tag == "RedPlayer")
@@ -25,7 +25,7 @@ public class DeadZone : MonoBehaviour
                 HandleDeath(collision);
             }
         }
-        // Case 3: BlueDeadZone은 WaterPlayer만
+        // Case 3: BlueDeadZone은 BluePlayer만
         else if (layer == LayerMask.NameToLayer("BlueDeadZone"))
         {
             if (tag == "BluePlayer")
