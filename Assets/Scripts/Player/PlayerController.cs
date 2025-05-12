@@ -25,7 +25,7 @@ public class PlayerController : Player
 
             if (Input.GetKeyDown(KeyCode.W) && isGrounded)
             {
-                Debug.Log("W key pressed");
+
                 Jump();
             }
         }
