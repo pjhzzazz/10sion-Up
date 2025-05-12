@@ -27,9 +27,14 @@ public class StageManager : MonoBehaviour
 
     public void ChangeStage(int stageIndex) // 스테이지 전환
     {
+        Debug.Log($"ChangeStage 호출됨. stageIndex = {stageIndex}, stageParents.Length = {stageParents.Length}");
+
         for (int i = 0; i < stageParents.Length; i++)
         {
-            stageParents[i].SetActive(i == stageIndex);
+                bool isActive = (i == stageIndex);
+                stageParents[i].SetActive(isActive);
+            Debug.Log($"stageParents[{i}] = {stageParents[i]?.name}, activeSelf = {stageParents[i]?.activeSelf}");
+            Debug.Log($"stageParents[{i}] belongs to scene: {stageParents[i]?.scene.name}");
         }
 
         currentStage = stageIndex;
@@ -56,15 +61,18 @@ public class StageManager : MonoBehaviour
         GameObject BluePlayer = Instantiate(BluePlayerPrefab, BlueSpawn.position, Quaternion.identity);
     }
 
-    public void ToNextStage() //다음 스테이지 이동
+    public void ToNextStage()
     {
-        if (currentStage + 1 < stageParents.Length)
-        {
-            GameManager.gameManager.SaveStageClear(currentStage);
+        int nextStageIndex = GameManager.gameManager.SelectedStageIndex + 1;
 
-            currentStage++;
-            ChangeStage(currentStage);
+        if (nextStageIndex < stageParents.Length)
+        {
+            ChangeStage(nextStageIndex);
+            GameManager.gameManager.SelectedStageIndex = nextStageIndex;
         }
-        else { SceneManagement.sceneManager.ToStageScene(); }
+        else
+        {
+            SceneManagement.sceneManager.ToStageSelectScene();
+        }
     }
 }

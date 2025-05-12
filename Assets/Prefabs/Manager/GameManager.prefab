@@ -44,4 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e9fd6bbb92f8b346b1cf48364f249d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiManager: {fileID: 5498850523425933327, guid: 042560bddd1fcc244a60c2df61dd2f15, type: 3}
+  uiManager: {fileID: 7719874685756619955, guid: c2f30873aa70ea44a841335ae17f4082, type: 3}
+  ClearedStage: 0
+  playTime: 0
+  IsPaused: 0

@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneManagement : MonoBehaviour
 {
-    public static SceneManagement sceneManager {  get; private set; }
+    public static SceneManagement sceneManager {  get; set; }
 
     private void Awake()
     {
@@ -22,7 +22,7 @@ public class SceneManagement : MonoBehaviour
         SceneManager.LoadScene("StartScene");
     }
 
-    public void ToStageScene()
+    public void ToStageSelectScene()
     {
         SceneManager.LoadScene("StageSelectScene");
     }

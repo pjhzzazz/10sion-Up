@@ -12,7 +12,7 @@ public class DeadZone : MonoBehaviour
         // Case 1: 공통 DeadZone
         if (layer == LayerMask.NameToLayer("DeadZone"))
         {
-            if (tag == "FirePlayer" || tag == "WaterPlayer")
+            if (tag == "RedPlayer" || tag == "BluePlayer")
             {
                 HandleDeath(collision);
             }
@@ -20,7 +20,7 @@ public class DeadZone : MonoBehaviour
         // Case 2: RedDeadZone은 FirePlayer만
         else if (layer == LayerMask.NameToLayer("RedDeadZone"))
         {
-            if (tag == "FirePlayer")
+            if (tag == "RedPlayer")
             {
                 HandleDeath(collision);
             }
@@ -28,7 +28,7 @@ public class DeadZone : MonoBehaviour
         // Case 3: BlueDeadZone은 WaterPlayer만
         else if (layer == LayerMask.NameToLayer("BlueDeadZone"))
         {
-            if (tag == "WaterPlayer")
+            if (tag == "BluePlayer")
             {
                 HandleDeath(collision);
             }
@@ -41,7 +41,7 @@ public class DeadZone : MonoBehaviour
 
         // 예: 초기 위치로 리스폰
         collision.transform.position = new Vector3(0, 0, 0);
-
+        GameManager.gameManager.GameOver();
         // 또는 Die() 메서드가 있다면 실행
         // var player = collision.GetComponent<Player>();
         // if (player != null) player.Die();
