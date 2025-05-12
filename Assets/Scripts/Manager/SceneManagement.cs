@@ -24,7 +24,7 @@ public class SceneManagement : MonoBehaviour
 
     public void ToStageScene()
     {
-        SceneManager.LoadScene("StageScene");
+        SceneManager.LoadScene("StageSelectScene");
     }
 
     public void ToMainScene()
