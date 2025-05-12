@@ -12345,8 +12345,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6e4dd9a3267cf641ade0974a5a316fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RedPlayerPrefab: {fileID: 215021312272484691, guid: 5b999b78504cd1241a92a57e8530f699, type: 3}
-  BluePlayerPrefab: {fileID: 1133542123924637610, guid: b13395b9b1976004886b4b88aa3d47cd, type: 3}
+  RedPlayerPrefab: {fileID: 6171298129891913142, guid: 5b999b78504cd1241a92a57e8530f699, type: 3}
+  BluePlayerPrefab: {fileID: 3292704025467702349, guid: b13395b9b1976004886b4b88aa3d47cd, type: 3}
   stageParents:
   - {fileID: 965709299802924459}
   - {fileID: 2437706415987382756}

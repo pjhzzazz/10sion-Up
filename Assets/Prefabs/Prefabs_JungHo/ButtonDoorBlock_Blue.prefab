@@ -115,8 +115,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4483014287179062473}
-  - component: {fileID: 628708708699438571}
   - component: {fileID: 6479159535016964068}
+  - component: {fileID: 8768930758120889040}
   m_Layer: 0
   m_Name: ButtonDoorBlock_Blue
   m_TagString: Untagged
@@ -140,21 +140,6 @@ Transform:
   - {fileID: 873762290383379971}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &628708708699438571
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6531790254566728443}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 617bdf5a4f354684381bb40c6c816cd2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DoorColor: 3
-  animator: {fileID: 587278370580346704}
-  doorCollider: {fileID: 6479159535016964068}
 --- !u!61 &6479159535016964068
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -200,3 +185,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &8768930758120889040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6531790254566728443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ae0ccaf3ce33bb40933c2bc14bdc3c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DoorColor: 0
+  animator: {fileID: 0}
+  doorCollider: {fileID: 0}
