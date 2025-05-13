@@ -31,6 +31,13 @@ public class Player : MonoBehaviour
     {
         if (GameManager.gameManager.IsPaused)
             return;
+
+        if (transform.position.y < -6f)
+        {
+            Death();
+            return;
+        }
+
         HandleAction();
     }
     
@@ -53,37 +60,37 @@ public class Player : MonoBehaviour
         animationHandler.Move(direction);
     }
 
-    //private void OnTriggerEnter2D(Collider2D collision)
-    //{
-    //    if (playerType == PlayerType.Fire)
-    //    {
-    //        if (collision.CompareTag("Ice"))
-    //        {
-    //            Destroy(collision.gameObject); // 얼음 파괴
-    //        }
-    //        else if (collision.CompareTag("FireObstacle"))
-    //        {
-    //            // 통과 허용 또는 무시
-    //        }
-    //    }
-    //    else if (playerType == PlayerType.Water)
-    //    {
-    //        if (collision.CompareTag("WaterObstacle"))
-    //        {
-    //            // 통과 허용 또는 무시
-    //        }
-    //        else if (collision.CompareTag("Fire"))
-    //        {
-    //            Destroy(collision.gameObject); // 불 파괴
-    //        }
-    //    }
-    //}
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (playerType == PlayerType.Fire)
+        {
+            if (collision.CompareTag("Wate"))
+            {
+                GameManager.gameManager.GameOver();
+                animationHandler.Die();
+            }
+            else if (collision.CompareTag("Fire"))
+            {
+                
+            }
+        }
+        else if (playerType == PlayerType.Water)
+        {
+            if (collision.CompareTag("Water"))
+            {
+                
+            }
+            else if (collision.CompareTag("Fire"))
+            {
+                GameManager.gameManager.GameOver();
+                animationHandler.Die();
 
-    //public virtual void Death()
-    //{
-    //    if (transform.position.y < -6f)
-    //    {
-    //        Death();
-    //    }
-    //}
+            }
+      }
+    }
+
+    public virtual void Death()
+    {
+   
+    }
 }

@@ -78,9 +78,8 @@ public class PlayerController : Player
         isGrounded = false;
     }
 
-    //public override void Death()
-    //{
-    //    base.Death();
-    //    GameManager.gameManager.GameOver();
-    //}
+    public override void Death()
+    {
+        GameManager.gameManager.GameOver();
+    }
 }
