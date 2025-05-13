@@ -11,6 +11,8 @@ public class PlayerController : Player
     private bool isGrounded = true;
     private bool isJumping = false;
 
+
+
     protected override void HandleAction()
     {
         float vertical = 0f;
@@ -54,13 +56,31 @@ public class PlayerController : Player
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-
-
         if (collision.gameObject.CompareTag("Ground"))
         {
             isJumping = false;
             animationHandler.Land();
         }
+
+        foreach (ContactPoint2D contact in collision.contacts)
+        {
+            // 아래 방향과 충돌면의 노멀을 비교 (노멀.y가 높을수록 아래에서 위로 힘이 작용함)
+            if (contact.normal.y > 0.5f)
+            {
+                isGrounded = true;
+                return;
+            }
+        }
     }
 
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        isGrounded = false;
+    }
+
+    //public override void Death()
+    //{
+    //    base.Death();
+    //    GameManager.gameManager.GameOver();
+    //}
 }

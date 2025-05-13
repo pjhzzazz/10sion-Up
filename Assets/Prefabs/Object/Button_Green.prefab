@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6041095700028395330}
-  - component: {fileID: 5164954691339870897}
   - component: {fileID: 6575114135523972162}
+  - component: {fileID: 8869601534069832847}
   m_Layer: 0
   m_Name: Button_Green
   m_TagString: Untagged
@@ -34,20 +34,6 @@ Transform:
   - {fileID: 1386993580712983857}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5164954691339870897
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2781784757287961669}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b00e6a52d4d76f438574f34033271a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 4019106703559103228}
-  SelectedPlateColor: 1
 --- !u!61 &6575114135523972162
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -93,6 +79,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &8869601534069832847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2781784757287961669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3685e12424f9a8545ba7a8669b4066f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 4019106703559103228}
+  SelectedPlateColor: 1
 --- !u!1 &7989338374925970156
 GameObject:
   m_ObjectHideFlags: 0

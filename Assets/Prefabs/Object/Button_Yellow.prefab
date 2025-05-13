@@ -91,7 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3685e12424f9a8545ba7a8669b4066f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  animator: {fileID: 8395612028955725052}
   SelectedPlateColor: 0
 --- !u!1 &4513777206270941961
 GameObject:

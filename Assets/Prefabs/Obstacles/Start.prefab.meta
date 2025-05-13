@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Prefabs/Obstacles/Start.prefab.meta
 guid: d360b98e56582644d835cf61b8f607dd
+========
+guid: 8771cbe4c8510594c8ae4e3deb85d159
+>>>>>>>> SucJaeHyuck_Work:Assets/Prefabs/Object/BlueHalfWall.prefab.meta
 PrefabImporter:
   externalObjects: {}
   userData: 
