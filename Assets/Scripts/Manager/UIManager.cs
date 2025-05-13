@@ -80,6 +80,7 @@ public class UIManager : MonoBehaviour
                 stageButtons[i].onClick.AddListener(() => SelectedStage(index));
                 stageButtons[i].interactable = (i <= GameManager.gameManager.ClearedStage);
 
+
                 Transform starParent = stageButtons[i].transform.Find("StarUI");
 
                 GameObject[] stars = new GameObject[5];

@@ -27,14 +27,10 @@ public class StageManager : MonoBehaviour
 
     public void ChangeStage(int stageIndex) // 스테이지 전환
     {
-        Debug.Log($"ChangeStage 호출됨. stageIndex = {stageIndex}, stageParents.Length = {stageParents.Length}");
-
         for (int i = 0; i < stageParents.Length; i++)
         {
                 bool isActive = (i == stageIndex);
                 stageParents[i].SetActive(isActive);
-            Debug.Log($"stageParents[{i}] = {stageParents[i]?.name}, activeSelf = {stageParents[i]?.activeSelf}");
-            Debug.Log($"stageParents[{i}] belongs to scene: {stageParents[i]?.scene.name}");
         }
 
         currentStage = stageIndex;
