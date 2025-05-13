@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8462062064805431436}
   - component: {fileID: 3872343979642106864}
   m_Layer: 0
-  m_Name: Sword
+  m_Name: Sword 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifeTime: 2
   speed: 10
-  direction: {x: 1, y: 0}
+  direction: {x: -1, y: 0}
 --- !u!61 &3872343979642106864
 BoxCollider2D:
   m_ObjectHideFlags: 0
