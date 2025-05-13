@@ -65,24 +65,26 @@ public class Player : MonoBehaviour
     {
         if (playerType == PlayerType.Fire)
         {
-            if (collision.CompareTag("Ice"))
+            if (collision.CompareTag("Water"))
             {
-                Destroy(collision.gameObject); // 얼음 파괴
+                animationHandler.Die();
+                GameManager.gameManager.GameOver();
             }
-            else if (collision.CompareTag("FireObstacle"))
+            else if (collision.CompareTag("Fire"))
             {
                 // 통과 허용 또는 무시
             }
         }
         else if (playerType == PlayerType.Water)
         {
-            if (collision.CompareTag("WaterObstacle"))
+            if (collision.CompareTag("Water"))
             {
                 // 통과 허용 또는 무시
             }
             else if (collision.CompareTag("Fire"))
             {
-                Destroy(collision.gameObject); // 불 파괴
+                animationHandler.Die();
+                GameManager.gameManager.GameOver();
             }
         }
     }
