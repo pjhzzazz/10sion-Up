@@ -4376,7 +4376,7 @@ GameObject:
   - component: {fileID: 7616907584350053825}
   m_Layer: 11
   m_Name: RedDeadZoneCollision
-  m_TagString: Untagged
+  m_TagString: Water
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4876,7 +4876,7 @@ GameObject:
   - component: {fileID: 13031966079926250}
   m_Layer: 12
   m_Name: BlueDeadZoneCollision
-  m_TagString: Untagged
+  m_TagString: Fire
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5538,7 +5538,7 @@ GameObject:
   - component: {fileID: 6991438980787548710}
   m_Layer: 11
   m_Name: RedDeadZoneCollision
-  m_TagString: Untagged
+  m_TagString: Water
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5874,7 +5874,7 @@ GameObject:
   - component: {fileID: 8368256395575389240}
   m_Layer: 12
   m_Name: BlueDeadZoneCollision
-  m_TagString: Untagged
+  m_TagString: Fire
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
