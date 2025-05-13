@@ -115,21 +115,21 @@ Tilemap:
       e12: 7.45e-43
       e13: 7.45e-43
       e20: -1.7574277e+9
-      e21: 214193920
-      e22: 8.9146335e-10
-      e23: 6.091552e+13
+      e21: 0.0000000020929498
+      e22: 0.0000000021928077
+      e23: -1.5982453e+29
       e30: 4.5905e-41
       e31: 7.5e-43
       e32: 7.47e-43
-      e33: 7.47e-43
+      e33: 7.48e-43
   m_TileColorArray:
   - m_RefCount: 0
-    m_Data: {r: NaN, g: NaN, b: NaN, a: NaN}
+    m_Data: {r: 3.14194e-40, g: 3.14194e-40, b: 3.14194e-40, a: 3.14194e-40}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_Origin: {x: 0, y: -8, z: 0}
-  m_Size: {x: 9, y: 19, z: 1}
+  m_Origin: {x: -11, y: -8, z: 0}
+  m_Size: {x: 27, y: 114, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -4414,6 +4414,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button_Yellow
       objectReference: {fileID: 0}
+    - target: {fileID: 3316598710255300467, guid: 7487cccc78005fb4aa49b78f383cfd82, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 2423408755895124288}
     - target: {fileID: 4345484061995073099, guid: 7487cccc78005fb4aa49b78f383cfd82, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.5
@@ -6154,6 +6158,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button_Yellow (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3316598710255300467, guid: 7487cccc78005fb4aa49b78f383cfd82, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 2423408755895124288}
     - target: {fileID: 4345484061995073099, guid: 7487cccc78005fb4aa49b78f383cfd82, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.5
