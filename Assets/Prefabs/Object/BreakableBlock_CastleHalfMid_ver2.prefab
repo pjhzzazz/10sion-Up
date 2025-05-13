@@ -432,7 +432,7 @@ GameObject:
   - component: {fileID: 6125860058411576334}
   - component: {fileID: 5258983582994734882}
   m_Layer: 0
-  m_Name: BreakableBlock_CastleHalfMid
+  m_Name: BreakableBlock_CastleHalfMid_ver2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
