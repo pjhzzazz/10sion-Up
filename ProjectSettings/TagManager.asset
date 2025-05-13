@@ -11,6 +11,7 @@ TagManager:
   - DeadZone
   - 'BlueDeadZone '
   - RedDeadZone
+  - Key
   layers:
   - Default
   - TransparentFX
