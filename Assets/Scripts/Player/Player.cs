@@ -31,7 +31,15 @@ public class Player : MonoBehaviour
     {
         if (GameManager.gameManager.IsPaused)
             return;
+
+        if (transform.position.y < -6f)
+        {
+            Death();
+            return;
+        }
+
         HandleAction();
+
     }
     
     protected virtual void FixedUpdate()
@@ -81,9 +89,6 @@ public class Player : MonoBehaviour
 
     public virtual void Death()
     {
-        if (transform.position.y < -6f)
-        {
-            Death();
-        }
+
     }
 }
