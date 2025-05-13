@@ -169,6 +169,8 @@ public class UIManager : MonoBehaviour
     {
         stageManager.SpawnCharacters(stageManager.currentStage);
         optionImg.SetActive(false);
+        FailureImg.SetActive(false);
+        SuccessImg.SetActive(false);
         GameManager.gameManager.ResetStage();
     }
 
