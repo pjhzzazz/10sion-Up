@@ -29,8 +29,8 @@ public class Player : MonoBehaviour
 
     protected virtual void Update()
     {
-        if (GameManager.gameManager.IsPaused)
-            return;
+        //if (GameManager.gameManager.IsPaused)
+        //    return;
 
         if (transform.position.y < -6f)
         {
@@ -43,8 +43,8 @@ public class Player : MonoBehaviour
     
     protected virtual void FixedUpdate()
     {
-        if (GameManager.gameManager.IsPaused)
-            return;
+        //if (GameManager.gameManager.IsPaused)
+        //    return;
         Movment(movementDirection);
     }
   
@@ -64,7 +64,7 @@ public class Player : MonoBehaviour
     {
         if (playerType == PlayerType.Fire)
         {
-            if (collision.CompareTag("Wate"))
+            if (collision.CompareTag("Water"))
             {
                 GameManager.gameManager.GameOver();
                 animationHandler.Die();

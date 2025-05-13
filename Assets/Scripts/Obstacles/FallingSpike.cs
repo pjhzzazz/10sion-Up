@@ -40,12 +40,11 @@ public class FallingSpike : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("RedPlayer") || collision.gameObject.CompareTag("BluePlayer"))
         {
-            Destroy(collision.gameObject); // 플레이어 사망
+            GameManager.gameManager.GameOver();
         }
         else
         {
             Destroy(gameObject);
         }
-           
     }
 }

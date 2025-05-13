@@ -5119,11 +5119,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1782820270749484788, guid: bbb2b0761f3b0b54081d254dc5ab923b, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.3043476
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1782820270749484788, guid: bbb2b0761f3b0b54081d254dc5ab923b, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.6521738
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 1782820270749484788, guid: bbb2b0761f3b0b54081d254dc5ab923b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5183,6 +5183,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1782820270749484788, guid: bbb2b0761f3b0b54081d254dc5ab923b, type: 3}
   m_PrefabInstance: {fileID: 748487171502928169}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5770607337613044469 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6518531450712513500, guid: bbb2b0761f3b0b54081d254dc5ab923b, type: 3}
+  m_PrefabInstance: {fileID: 748487171502928169}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 485e779e83a2bc149abbaf0ae1bfe5d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &824782408727705542
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6112,6 +6123,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5663f05abf4ec03448bfb702064775af, type: 3}
+--- !u!114 &2858464494784160330 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8224293438706975282, guid: 5663f05abf4ec03448bfb702064775af, type: 3}
+  m_PrefabInstance: {fileID: 6163669902849319032}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 092ebf5f386f796499d19f91cd939a43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &8839992605839770999 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3396900966949283087, guid: 5663f05abf4ec03448bfb702064775af, type: 3}
@@ -6129,6 +6151,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LaserSwitchBlue
       objectReference: {fileID: 0}
+    - target: {fileID: 5739770395656563348, guid: f7d52d9e495d4194eabcdb5ee09efc47, type: 3}
+      propertyPath: blueLasers.Array.data[0]
+      value: 
+      objectReference: {fileID: 2858464494784160330}
     - target: {fileID: 8359754546298243975, guid: f7d52d9e495d4194eabcdb5ee09efc47, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.4347826
@@ -6273,6 +6299,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LaserSwitchRed
       objectReference: {fileID: 0}
+    - target: {fileID: 4642627391992128296, guid: f04186e7571bf6f438a926e66ef49396, type: 3}
+      propertyPath: redLasers.Array.data[0]
+      value: 
+      objectReference: {fileID: 5770607337613044469}
     - target: {fileID: 5019639428873345188, guid: f04186e7571bf6f438a926e66ef49396, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.4347826
