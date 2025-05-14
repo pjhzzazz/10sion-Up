@@ -131,6 +131,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1514585236}
     m_Modifications:
+    - target: {fileID: 2386553441027788279, guid: f4de4154a96958d43aa0374b38ceb1ae, type: 3}
+      propertyPath: bgmOnSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 017c8292736c37c46bd8172cd7f7b93b, type: 3}
+    - target: {fileID: 2386553441027788279, guid: f4de4154a96958d43aa0374b38ceb1ae, type: 3}
+      propertyPath: bgmOffSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 72ef693ce4fb50b4e9ffc69e45720456, type: 3}
     - target: {fileID: 2580231554214619371, guid: f4de4154a96958d43aa0374b38ceb1ae, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -215,6 +223,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: StartMenuUI
       objectReference: {fileID: 0}
+    - target: {fileID: 5924796114873743448, guid: f4de4154a96958d43aa0374b38ceb1ae, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 017c8292736c37c46bd8172cd7f7b93b, type: 3}
+    - target: {fileID: 6199382645305846213, guid: f4de4154a96958d43aa0374b38ceb1ae, type: 3}
+      propertyPath: soundEffectOnSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 57485e8819e8d0e45b93189d657ef302, type: 3}
+    - target: {fileID: 6199382645305846213, guid: f4de4154a96958d43aa0374b38ceb1ae, type: 3}
+      propertyPath: SoundEffectOffSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 59b34bd3dd9f65a49b7c15af442fc0bb, type: 3}
+    - target: {fileID: 8152778335995513017, guid: f4de4154a96958d43aa0374b38ceb1ae, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 57485e8819e8d0e45b93189d657ef302, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -508,14 +532,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3502899721488872579, guid: c8049a96ecd4f3542954dcd2204c4ce5, type: 3}
-      propertyPath: bgms.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3502899721488872579, guid: c8049a96ecd4f3542954dcd2204c4ce5, type: 3}
-      propertyPath: bgms.Array.data[2]
-      value: 
-      objectReference: {fileID: 8300000, guid: a3fd7709fb8ba004fab808f6dc21ac99, type: 3}
     - target: {fileID: 6074921860584574981, guid: c8049a96ecd4f3542954dcd2204c4ce5, type: 3}
       propertyPath: m_Name
       value: AudioManager
