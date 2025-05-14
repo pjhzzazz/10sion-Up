@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public enum PlayerType { Fire, Water }
+    public enum PlayerType { Red, Blue }
     public PlayerType playerType;
 
     protected Rigidbody2D _rigidbody;
@@ -29,8 +29,8 @@ public class Player : MonoBehaviour
 
     protected virtual void Update()
     {
-        //if (GameManager.gameManager.IsPaused)
-        //    return;
+        if (GameManager.Instance.CurrentState == GameManager.GameState.Paused)
+            return;
 
         if (transform.position.y < -6f)
         {
@@ -43,8 +43,8 @@ public class Player : MonoBehaviour
     
     protected virtual void FixedUpdate()
     {
-        //if (GameManager.gameManager.IsPaused)
-        //    return;
+        if (GameManager.Instance.CurrentState == GameManager.GameState.Paused)
+            return;
         Movment(movementDirection);
     }
   
@@ -60,34 +60,34 @@ public class Player : MonoBehaviour
         animationHandler.Move(direction);
     }
 
-    //private void OnTriggerEnter2D(Collider2D collision)
-    //{
-    //    if (playerType == PlayerType.Fire)
-    //    {
-    //        if (collision.CompareTag("Water"))
-    //        {
-    //            GameManager.gameManager.GameOver();
-    //            animationHandler.Die();
-    //        }
-    //        else if (collision.CompareTag("Fire"))
-    //        {
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (playerType == PlayerType.Red)
+        {
+            if (collision.CompareTag("Water"))
+            {
+                GameManager.Instance.GameOver();
+                animationHandler.Die();
+            }
+            else if (collision.CompareTag("Fire"))
+            {
                 
-    //        }
-    //    }
-    //    else if (playerType == PlayerType.Water)
-    //    {
-    //        if (collision.CompareTag("Water"))
-    //        {
+            }
+        }
+        else if (playerType == PlayerType.Blue)
+        {
+            if (collision.CompareTag("Water"))
+            {
                 
-    //        }
-    //        else if (collision.CompareTag("Fire"))
-    //        {
-    //            GameManager.gameManager.GameOver();
-    //            animationHandler.Die();
+            }
+            else if (collision.CompareTag("Fire"))
+            {
+                GameManager.Instance.GameOver();
+                animationHandler.Die();
 
-    //        }
-    //  }
-    //}
+            }
+      }
+    }
 
     public virtual void Death()
     {

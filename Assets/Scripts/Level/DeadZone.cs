@@ -40,7 +40,7 @@ public class DeadZone : MonoBehaviour
         Debug.Log($"{collision.tag} 가 {LayerMask.LayerToName(gameObject.layer)}에 충돌했습니다.");
 
         // 캐릭터 사망 메서드
-        GameManager.gameManager.GameOver();
+        GameManager.Instance.GameOver();
 
     }
 }
