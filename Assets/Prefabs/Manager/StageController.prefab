@@ -723,10 +723,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8752116539189343944, guid: 74b0683091f68404b8ef53d9874f23f9, type: 3}
-      propertyPath: m_TagString
-      value: Water
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

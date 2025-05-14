@@ -19,11 +19,9 @@ public class SpikeSpawner : MonoBehaviour
     }
     void SpawnSpike()
     {
-       
-            Instantiate(spikeTopPrefab, topSpawnPoint.position, Quaternion.identity);
-     
 
-        
+            Instantiate(spikeTopPrefab, topSpawnPoint.position, Quaternion.identity);
+             
             Instantiate(spikeBottomPrefab, bottomSpawnPoint.position, Quaternion.identity);
      
     }
