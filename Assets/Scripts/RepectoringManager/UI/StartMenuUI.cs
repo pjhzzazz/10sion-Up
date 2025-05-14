@@ -9,13 +9,29 @@ public class StartMenuUI : BaseUI
     [SerializeField] private Button startBtn;
     [SerializeField] private Button optionBtn;
 
+    public GameObject optionPanel;
+
     private void Awake()
     {
+
+        optionBtn.onClick.AddListener(() =>
+        {
+            AudioManager.Instance.PlaySoundEffects("click");
+            optionPanel.SetActive(true);
+        });
+
         if (SaveSystem.SaveExists())
         {
-            startBtn.onClick.AddListener(UIButtonHandler.OnMainMenuButtonClicked);
+            startBtn.onClick.AddListener(() =>
+            {
+                AudioManager.Instance.PlaySoundEffects("click");
+                UIButtonHandler.OnMainMenuButtonClicked();
+            }); 
         }
-        else startBtn.onClick.AddListener(GameManager.Instance.GameStory);
-
+        else startBtn.onClick.AddListener(() =>
+        {
+            AudioManager.Instance.PlaySoundEffects("click");
+            GameManager.Instance.GameStory();
+        }); 
     }
 }
