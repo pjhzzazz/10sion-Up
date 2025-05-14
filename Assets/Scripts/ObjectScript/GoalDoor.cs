@@ -85,7 +85,7 @@ public class GoalDoor : MonoBehaviour
         }
         if (IsBlueGoal || IsRedGoal)
         {
-            GameManager.gameManager.Success();
+            GameManager.Instance.GameClear();
         }
     }
 }

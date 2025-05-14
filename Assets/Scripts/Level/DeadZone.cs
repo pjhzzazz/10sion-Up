@@ -41,7 +41,7 @@ public class DeadZone : MonoBehaviour
 
         // 예: 초기 위치로 리스폰
         collision.transform.position = new Vector3(0, 0, 0);
-        GameManager.gameManager.GameOver();
+        GameManager.Instance.GameOver();
         // 또는 Die() 메서드가 있다면 실행
         // var player = collision.GetComponent<Player>();
         // if (player != null) player.Die();

@@ -8,7 +8,7 @@ public class GemBlue : MonoBehaviour
     {
         if (collision.CompareTag("BluePlayer"))
         {
-            GameManager.gameManager.AddGem(1);
+            GameManager.Instance.AddGem(1);
             Destroy(gameObject);
         }
     }

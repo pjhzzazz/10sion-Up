@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerType: 0
-  controlType: 0
+  controlType: 1
   jumpForce: 8.5
 --- !u!114 &2439728858739371985
 MonoBehaviour:
@@ -228,6 +228,6 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.5, y: 1}
+  m_Offset: {x: -0.003939271, y: -0.20000002}
+  m_Size: {x: 0.44154656, y: 0.5375951}
   m_Direction: 0
