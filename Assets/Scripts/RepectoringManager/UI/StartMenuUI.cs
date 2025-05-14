@@ -13,15 +13,25 @@ public class StartMenuUI : BaseUI
 
     private void Awake()
     {
-        startBtn.onClick.AddListener(() =>
-        {
-            AudioManager.Instance.PlaySoundEffects("click");
-            UIButtonHandler.OnMainMenuButtonClicked();
-        });
+
         optionBtn.onClick.AddListener(() =>
         {
             AudioManager.Instance.PlaySoundEffects("click");
             optionPanel.SetActive(true);
         });
+
+        if (SaveSystem.SaveExists())
+        {
+            startBtn.onClick.AddListener(() =>
+            {
+                AudioManager.Instance.PlaySoundEffects("click");
+                UIButtonHandler.OnMainMenuButtonClicked();
+            }); 
+        }
+        else startBtn.onClick.AddListener(() =>
+        {
+            AudioManager.Instance.PlaySoundEffects("click");
+            GameManager.Instance.GameStory();
+        }); 
     }
 }

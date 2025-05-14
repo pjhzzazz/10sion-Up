@@ -198,4 +198,10 @@ public class GameManager : MonoBehaviour
             ChangeState(GameState.StartMenu);
         });
     }
+
+    public void GameStory()
+    {
+        Time.timeScale = 1;
+        UIManager.Instance.OpenUI(UIType.Story);
+    }
 }

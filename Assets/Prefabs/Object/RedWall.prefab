@@ -205,7 +205,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   redBlockLayer:
     serializedVersion: 2
-    m_Bits: 8192
+    m_Bits: 0
   blueBlockLayer:
     serializedVersion: 2
-    m_Bits: 16384
+    m_Bits: 0

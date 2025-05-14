@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 5341160510341849830}
   - component: {fileID: 7756016547669887773}
   - component: {fileID: -3680067989224297498}
-  - component: {fileID: 3745020815967251132}
+  - component: {fileID: 7437707148907122110}
   m_Layer: 0
   m_Name: JumpGear
   m_TagString: Ground
@@ -159,7 +159,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &3745020815967251132
+--- !u!61 &7437707148907122110
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
