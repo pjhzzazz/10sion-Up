@@ -61,6 +61,7 @@ public class StageController : MonoBehaviour
         if (nextStageIndex < stageParents.Length)
         {
             ChangeStage(nextStageIndex);
+            GameManager.Instance.selectedStage = nextStageIndex;
         }
         else
         {

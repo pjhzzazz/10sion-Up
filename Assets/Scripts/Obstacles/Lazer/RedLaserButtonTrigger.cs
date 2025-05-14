@@ -7,20 +7,13 @@ public class RedLaserButtonTrigger : MonoBehaviour
     public RedLaser[] redLasers;
     private Animator animator;
     private bool isTrigger = false;
-    // Start is called before the first frame update
     void Start()
     {
         animator = gameObject.GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
     private void OnTriggerEnter2D(Collider2D other)
     {
-       
         if (other.CompareTag("RedPlayer"))  
         {
             isTrigger = !isTrigger;

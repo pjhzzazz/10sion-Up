@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class LiquidWater : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.CompareTag("RedPlayer"))
+        if (other.CompareTag("RedPlayer"))
         {
             GameManager.Instance.GameOver();
         }
