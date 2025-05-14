@@ -19,7 +19,7 @@ public class BlueLaser : MonoBehaviour
     {
         if (other.CompareTag("RedPlayer"))
         {
-            Debug.Log("FirePlayer Á×À½");
+            GameManager.Instance.GameOver();
             
         }
     }

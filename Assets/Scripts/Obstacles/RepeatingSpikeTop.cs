@@ -17,7 +17,7 @@ public class RepeatingSpikeTop : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("RedPlayer") || collision.gameObject.CompareTag("BluePlayer"))
         {
-            Destroy(collision.gameObject);
+            GameManager.Instance.GameOver();
         }
         else if (Time.time - spawnTime > 0.5f && collision.gameObject.CompareTag("Ground"))
         {
