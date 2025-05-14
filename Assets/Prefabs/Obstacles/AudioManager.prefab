@@ -265,7 +265,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6351659367176927174}
-  - component: {fileID: 2133723426940542888}
+  - component: {fileID: 3502899721488872579}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -290,7 +290,7 @@ Transform:
   - {fileID: 1485630865718860735}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2133723426940542888
+--- !u!114 &3502899721488872579
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -299,16 +299,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6074921860584574981}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f08d455ab0aa3f142a76faaeb7d69879, type: 3}
+  m_Script: {fileID: 11500000, guid: 40bb5cafd22688746961e9d8cf48db0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bgmSource: {fileID: 6734189396622486441}
-  sfxSource: {fileID: 3170072236295262034}
-  bgms: []
-  sfxs:
-  - {fileID: 8300000, guid: ce44cfbadbc34f54ca1b6b42f36a48e2, type: 3}
-  - {fileID: 8300000, guid: f0695df1618f3194a9803203631b27cc, type: 3}
-  - {fileID: 8300000, guid: 27beff662c29f3c41bf277ae91da58f8, type: 3}
-  - {fileID: 8300000, guid: c93b0124d2d6a774fa19598bd6961fd8, type: 3}
-  - {fileID: 8300000, guid: 77cc1f53a10540042abeef33dabb1a08, type: 3}
-  - {fileID: 8300000, guid: c4f60dc96cfe24442ada7616fbe7a362, type: 3}
+  soundEffectSource: {fileID: 3170072236295262034}
+  bgms:
+  - {fileID: 8300000, guid: e82e66d173ceb884dad8d57eeb580633, type: 3}
+  - {fileID: 8300000, guid: 332aa73f748a24a44806c130ac5f778b, type: 3}
+  soundEffects: []

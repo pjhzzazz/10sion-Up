@@ -8,7 +8,6 @@ using UnityEngine.XR;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-
     public enum GameState {StartMenu, SelectingStage, Playing, Paused, GameOver, GameClear }
     public GameState CurrentState { get; private set; }
 
@@ -62,6 +61,7 @@ public class GameManager : MonoBehaviour
         {
             case GameState.StartMenu:
                 UIManager.Instance.OpenUI(UIType.StartMenu);
+                AudioManager.Instance.PlayBGM("bgm");
                 break;
 
             case GameState.SelectingStage:
@@ -72,6 +72,7 @@ public class GameManager : MonoBehaviour
                 Time.timeScale = 1;
                 playTime = 0;
                 gainedGem = 0;
+                AudioManager.Instance.PlayBGM("Stage1");
                 break;
 
             case GameState.Paused:
@@ -192,6 +193,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         SceneController.Instance.LoadScene("MainMenuScene", () =>
         {
+            AudioManager.Instance.PlaySoundEffects("click");
             ChangeState(GameState.StartMenu);
         });
     }

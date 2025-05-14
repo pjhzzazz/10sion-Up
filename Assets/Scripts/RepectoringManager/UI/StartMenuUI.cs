@@ -9,8 +9,11 @@ public class StartMenuUI : BaseUI
     [SerializeField] private Button startBtn;
     [SerializeField] private Button optionBtn;
 
+    public GameObject optionPanel;
+
     private void Awake()
     {
         startBtn.onClick.AddListener(UIButtonHandler.OnMainMenuButtonClicked);
+        optionBtn.onClick.AddListener(() => optionPanel.SetActive(true));
     }
 }

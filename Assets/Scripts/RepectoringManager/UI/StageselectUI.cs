@@ -18,7 +18,11 @@ public class StageselectUI : BaseUI
         for (int i = 0; i < stageButtons.Count; i++)
         {
             int selectedStage = i;
-            stageButtons[i].onClick.AddListener(() => GameManager.Instance.StartGame(selectedStage));
+            stageButtons[i].onClick.AddListener(() =>
+            {
+                AudioManager.Instance.PlaySoundEffects("click");
+                GameManager.Instance.StartGame(selectedStage);
+            });
             stageButtons[i].interactable = (i <= GameManager.Instance.ClearedStage + 1);
 
             int savedStars = 0;

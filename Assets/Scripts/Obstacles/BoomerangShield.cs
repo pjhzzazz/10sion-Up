@@ -46,12 +46,11 @@ public class BoomerangShield : MonoBehaviour
 
 
 
-    private void OnCollision2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.CompareTag("RedPlayer") || collision.CompareTag("BluePlayer"))
+        if (collision.gameObject.CompareTag("RedPlayer") || collision.gameObject.CompareTag("BluePlayer"))
         {
-            Debug.Log("ÇÃ·¹ÀÌ¾î ºÎµúÈû!");
-            // TODO: ÇÃ·¹ÀÌ¾î »ç¸Á
+            GameManager.Instance.GameOver();
         }
     }
 }
