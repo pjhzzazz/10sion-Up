@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class LiquidLava : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.CompareTag("BluePlayer"))
+        if (other.CompareTag("BluePlayer"))
         {
             GameManager.Instance.GameOver();
         }

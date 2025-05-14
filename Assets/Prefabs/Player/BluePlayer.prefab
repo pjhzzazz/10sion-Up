@@ -80,6 +80,8 @@ MonoBehaviour:
   playerType: 1
   controlType: 1
   jumpForce: 8.5
+  isGrounded: 1
+  isJumping: 0
 --- !u!114 &271029122990543694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,7 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bebcd09501351e459477fa54029cf28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickKey: 101
+  pickKey: 114
   holdPoint: {fileID: 6716741367439504278}
 --- !u!1 &4316325770856085000
 GameObject:

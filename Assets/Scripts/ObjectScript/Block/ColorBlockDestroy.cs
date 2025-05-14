@@ -16,13 +16,13 @@ public class ColorBlockDestroy : MonoBehaviour
         // Case 1: RedPlayer가 RedBlock에 충돌
         if (otherTag == "RedPlayer" && thisLayer == LayerMask.NameToLayer("RedBlock"))
         {
-            //Debug.Log("RedPlayer와 RedBlock 충돌! 오브젝트 파괴");
+            Debug.Log("RedPlayer와 RedBlock 충돌! 오브젝트 파괴");
             Destroy(gameObject);
         }
         // Case 2: BluePlayer가 BlueBlock에 충돌
         else if (otherTag == "BluePlayer" && thisLayer == LayerMask.NameToLayer("BlueBlock"))
         {
-           //Debug.Log("BluePlayer와 BlueBlock 충돌! 오브젝트 파괴");
+           Debug.Log("BluePlayer와 BlueBlock 충돌! 오브젝트 파괴");
             Destroy(gameObject);
         }
         // 그 외 조합은 아무 일도 하지 않음 → 충돌 판정 유지

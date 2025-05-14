@@ -12,8 +12,11 @@ public class SpikeSpawner : MonoBehaviour
     {
         InvokeRepeating("SpawnSpike", interval, interval);
     }
-   
 
+    private void OnDisable()
+    {
+        CancelInvoke("SpawnSpike"); //비활성화되면 자동으로 반복 중단
+    }
     void SpawnSpike()
     {
 
