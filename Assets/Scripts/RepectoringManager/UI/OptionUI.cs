@@ -14,13 +14,15 @@ public class OptionUI : BaseUI
     private void Awake()
     {
         resumeBtn.onClick.AddListener(() => 
-        { 
+        {
+            AudioManager.Instance.PlaySoundEffects("click");
             GameManager.Instance.ResumeGame();
             Hide();
         });
 
         retryBtn.onClick.AddListener(() => 
-        { 
+        {
+            AudioManager.Instance.PlaySoundEffects("click");
             UIButtonHandler.OnStageSelectAndRestartButtonClicked(GameManager.Instance.selectedStage); 
             Hide(); 
         });

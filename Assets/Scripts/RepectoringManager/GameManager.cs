@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    public enum GameState {StartMenu, SelectingStage, Playing, Paused, GameOver, GameClear }
+    public enum GameState { StartMenu, SelectingStage, Playing, Paused, GameOver, GameClear }
     public GameState CurrentState { get; private set; }
 
     public int ClearedStage = -1;
@@ -62,16 +62,19 @@ public class GameManager : MonoBehaviour
         {
             case GameState.StartMenu:
                 UIManager.Instance.OpenUI(UIType.StartMenu);
+                AudioManager.Instance.PlayBGM("bgm1");
                 break;
 
             case GameState.SelectingStage:
                 UIManager.Instance.OpenUI(UIType.SelectingStage);
+                AudioManager.Instance.PlayBGM("bgm1");
                 break;
 
             case GameState.Playing:
                 Time.timeScale = 1;
                 playTime = 0;
                 gainedGem = 0;
+                AudioManager.Instance.PlayBGM("Stage1");
                 break;
 
             case GameState.Paused:
@@ -126,15 +129,7 @@ public class GameManager : MonoBehaviour
     public void GameClear() // 클리어 시 UI 불러오기, 저장 처리 기능
     {
         ChangeState(GameState.GameClear);
-
-        if (StarRatingUI.Instance != null)
-        {
-            StarRatingUI.Instance.PointToStar(gainedGem, playTime);
-        }
-        else
-        {
-            Debug.LogWarning("GameClear 중 StarRatingUI가 null입니다.");
-        }
+        StarRatingUI.Instance.PointToStar(gainedGem, playTime);
 
         SaveGame();
     }
