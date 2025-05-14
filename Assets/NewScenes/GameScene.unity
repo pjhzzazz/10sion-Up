@@ -138,13 +138,17 @@ PrefabInstance:
     - target: {fileID: 4269215755607910624, guid: c2f30873aa70ea44a841335ae17f4082, type: 3}
       propertyPath: uiEntries.Array.data[2].ui
       value: 
-      objectReference: {fileID: 8413008474109208068}
+      objectReference: {fileID: 4075023955516366443, guid: a3d3a2f0c88271a4283c109c5d6f48c5, type: 3}
     - target: {fileID: 4269215755607910624, guid: c2f30873aa70ea44a841335ae17f4082, type: 3}
       propertyPath: uiEntries.Array.data[3].ui
       value: 
-      objectReference: {fileID: 947275444652086257}
+      objectReference: {fileID: 8413008474109208068}
     - target: {fileID: 4269215755607910624, guid: c2f30873aa70ea44a841335ae17f4082, type: 3}
       propertyPath: uiEntries.Array.data[4].ui
+      value: 
+      objectReference: {fileID: 947275444652086257}
+    - target: {fileID: 4269215755607910624, guid: c2f30873aa70ea44a841335ae17f4082, type: 3}
+      propertyPath: uiEntries.Array.data[5].ui
       value: 
       objectReference: {fileID: 1719063832041518964}
     - target: {fileID: 8139929229862752554, guid: c2f30873aa70ea44a841335ae17f4082, type: 3}

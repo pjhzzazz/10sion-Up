@@ -11,6 +11,11 @@ public class StartMenuUI : BaseUI
 
     private void Awake()
     {
-        startBtn.onClick.AddListener(UIButtonHandler.OnMainMenuButtonClicked);
+        if (SaveSystem.SaveExists())
+        {
+            startBtn.onClick.AddListener(UIButtonHandler.OnMainMenuButtonClicked);
+        }
+        else startBtn.onClick.AddListener(GameManager.Instance.GameStory);
+
     }
 }

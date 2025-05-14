@@ -6,6 +6,7 @@ public enum UIType
 {
         None,
         StartMenu,
+        Story,
         SelectingStage,
         Option,
         Failure,
