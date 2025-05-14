@@ -11,6 +11,8 @@ TagManager:
   - DeadZone
   - 'BlueDeadZone '
   - RedDeadZone
+  - Key
+  - KeyTrigger
   layers:
   - Default
   - TransparentFX
@@ -25,8 +27,8 @@ TagManager:
   - DeadZone
   - RedDeadZone
   - 'BlueDeadZone '
-  - 
-  - 
+  - RedBlock
+  - BlueBlock
   - 
   - 
   - 

@@ -39,11 +39,8 @@ public class DeadZone : MonoBehaviour
     {
         Debug.Log($"{collision.tag} 가 {LayerMask.LayerToName(gameObject.layer)}에 충돌했습니다.");
 
-        // 예: 초기 위치로 리스폰
-        collision.transform.position = new Vector3(0, 0, 0);
-        GameManager.Instance.GameOver();
-        // 또는 Die() 메서드가 있다면 실행
-        // var player = collision.GetComponent<Player>();
-        // if (player != null) player.Die();
+        // 캐릭터 사망 메서드
+        GameManager.gameManager.GameOver();
+
     }
 }

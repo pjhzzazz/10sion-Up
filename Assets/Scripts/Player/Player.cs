@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public enum PlayerType { Fire, Water }
+    public enum PlayerType { Red, Blue }
     public PlayerType playerType;
 
     protected Rigidbody2D _rigidbody;
@@ -15,8 +15,6 @@ public class Player : MonoBehaviour
 
     protected Vector2 lookDirection = Vector2.zero;
     public Vector2 LookDirection { get { return lookDirection; } }
-
-    //private float minY = -4.6f;
 
     protected virtual void Awake()
     {
@@ -33,6 +31,13 @@ public class Player : MonoBehaviour
     {
         if (GameManager.Instance.CurrentState == GameManager.GameState.Paused)
             return;
+
+        if (transform.position.y < -6f)
+        {
+            Death();
+            return;
+        }
+
         HandleAction();
     }
     
@@ -54,39 +59,38 @@ public class Player : MonoBehaviour
         _rigidbody.velocity = direction;
         animationHandler.Move(direction);
     }
-    /*
-    void LateUpdate()
-    {
-        if (transform.position.y < minY)
-        {
-            transform.position = new Vector3(transform.position.x, minY, transform.position.z);
-            _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, 0f);
-        }
-    }
-    */
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (playerType == PlayerType.Fire)
+        if (playerType == PlayerType.Red)
         {
-            if (collision.CompareTag("Ice"))
+            if (collision.CompareTag("Water"))
             {
-                Destroy(collision.gameObject); // 얼음 파괴
-            }
-            else if (collision.CompareTag("FireObstacle"))
-            {
-                // 통과 허용 또는 무시
-            }
-        }
-        else if (playerType == PlayerType.Water)
-        {
-            if (collision.CompareTag("WaterObstacle"))
-            {
-                // 통과 허용 또는 무시
+                GameManager.gameManager.GameOver();
+                animationHandler.Die();
             }
             else if (collision.CompareTag("Fire"))
             {
-                Destroy(collision.gameObject); // 불 파괴
+                
             }
         }
+        else if (playerType == PlayerType.Blue)
+        {
+            if (collision.CompareTag("Water"))
+            {
+                
+            }
+            else if (collision.CompareTag("Fire"))
+            {
+                GameManager.gameManager.GameOver();
+                animationHandler.Die();
+
+            }
+      }
+    }
+
+    public virtual void Death()
+    {
+   
     }
 }
