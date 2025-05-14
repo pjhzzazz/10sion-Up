@@ -13,6 +13,8 @@ TagManager:
   - RedDeadZone
   - Key
   - KeyTrigger
+  - Fire
+  - Water
   layers:
   - Default
   - TransparentFX

@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 2374780788142269826}
   m_Layer: 11
   m_Name: RedDeadZoneCollision
-  m_TagString: Untagged
+  m_TagString: Water
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1329,7 +1329,7 @@ GameObject:
   - component: {fileID: 5733048467350823820}
   m_Layer: 12
   m_Name: BlueDeadZoneCollision
-  m_TagString: Untagged
+  m_TagString: Fire
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
