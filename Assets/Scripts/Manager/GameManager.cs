@@ -62,12 +62,10 @@ public class GameManager : MonoBehaviour
         {
             case GameState.StartMenu:
                 UIManager.Instance.OpenUI(UIType.StartMenu);
-                AudioManager.Instance.PlayBGM("bgm1");
                 break;
 
             case GameState.SelectingStage:
                 UIManager.Instance.OpenUI(UIType.SelectingStage);
-                AudioManager.Instance.PlayBGM("bgm1");
                 break;
 
             case GameState.Playing:
@@ -94,7 +92,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void StartGame(int selectedStage)
+    public void StartGame(int selectedStage) //게임 플레이
     {
         this.selectedStage = selectedStage;
 
@@ -105,23 +103,23 @@ public class GameManager : MonoBehaviour
         });
     }
 
-    public void AddGem(int Gem)
+    public void AddGem(int Gem) // 득점
     {
         gainedGem += Gem;
     }
 
-    public void PauseGame()
+    public void PauseGame() //
     {
         Debug.Log("PauseGame called");
         ChangeState(GameState.Paused);
     }
 
-    public void ResumeGame()
+    public void ResumeGame() //
     {
         Time.timeScale = 1;
     }
 
-    public void GameOver() // 캐릭터 죽을 시 UI 불러오기
+    public void GameOver() // 캐릭터 죽을 시
     {
         ChangeState(GameState.GameOver);
     }
@@ -175,16 +173,15 @@ public class GameManager : MonoBehaviour
 
     public void ReturnToSelectingStage()
     {
-        Time.timeScale = 1;
         SceneController.Instance.LoadScene("MainMenuScene", () =>
         {
             ChangeState(GameState.SelectingStage);
+            AudioManager.Instance.PlayBGM("bgm1");
         });
     }
 
     public void ReturnToStartMenu()
     {
-        Time.timeScale = 1;
         SceneController.Instance.LoadScene("MainMenuScene", () =>
         {
             ChangeState(GameState.StartMenu);
@@ -193,7 +190,7 @@ public class GameManager : MonoBehaviour
 
     public void GameStory()
     {
-        Time.timeScale = 1;
         UIManager.Instance.OpenUI(UIType.Story);
+        AudioManager.Instance.PlayBGM("bgm1");
     }
 }

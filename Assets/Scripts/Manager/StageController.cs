@@ -16,7 +16,11 @@ public class StageController : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance == null) Instance = this;
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
         else Destroy(gameObject);
     }
 
@@ -25,7 +29,9 @@ public class StageController : MonoBehaviour
         for (int i = 0; i < stageParents.Length; i++)
         {
             bool isActive = (i == selectedStage);
-            stageParents[i].SetActive(isActive);
+
+            if (isActive) stageParents[i].SetActive(true);
+            else stageParents[i].SetActive(false);
         }
 
         SpawnCharacters(selectedStage);

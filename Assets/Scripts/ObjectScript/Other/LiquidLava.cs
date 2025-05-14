@@ -8,7 +8,7 @@ public class LiquidLava : MonoBehaviour
     {
         if (collision.CompareTag("BluePlayer"))
         {
-            //게임오버
+            GameManager.Instance.GameOver();
         }
     }
 }
