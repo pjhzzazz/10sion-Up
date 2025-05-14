@@ -160,11 +160,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5338766801837996456, guid: 5be7bbb3d00edf548beef6140063448c, type: 3}
       propertyPath: m_TagString
-      value: KeyTrigger
+      value: Key
       objectReference: {fileID: 0}
     - target: {fileID: 5492705334188079708, guid: 5be7bbb3d00edf548beef6140063448c, type: 3}
       propertyPath: m_TagString
-      value: KeyTrigger
+      value: Key
       objectReference: {fileID: 0}
     - target: {fileID: 7902355146337539074, guid: 5be7bbb3d00edf548beef6140063448c, type: 3}
       propertyPath: m_LocalPosition.x
