@@ -60,34 +60,34 @@ public class Player : MonoBehaviour
         animationHandler.Move(direction);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (playerType == PlayerType.Fire)
-        {
-            if (collision.CompareTag("Water"))
-            {
-                GameManager.gameManager.GameOver();
-                animationHandler.Die();
-            }
-            else if (collision.CompareTag("Fire"))
-            {
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if (playerType == PlayerType.Fire)
+    //    {
+    //        if (collision.CompareTag("Water"))
+    //        {
+    //            GameManager.gameManager.GameOver();
+    //            animationHandler.Die();
+    //        }
+    //        else if (collision.CompareTag("Fire"))
+    //        {
                 
-            }
-        }
-        else if (playerType == PlayerType.Water)
-        {
-            if (collision.CompareTag("Water"))
-            {
+    //        }
+    //    }
+    //    else if (playerType == PlayerType.Water)
+    //    {
+    //        if (collision.CompareTag("Water"))
+    //        {
                 
-            }
-            else if (collision.CompareTag("Fire"))
-            {
-                GameManager.gameManager.GameOver();
-                animationHandler.Die();
+    //        }
+    //        else if (collision.CompareTag("Fire"))
+    //        {
+    //            GameManager.gameManager.GameOver();
+    //            animationHandler.Die();
 
-            }
-      }
-    }
+    //        }
+    //  }
+    //}
 
     public virtual void Death()
     {
