@@ -12,7 +12,11 @@ public class BGMToggleButton : MonoBehaviour
 
     private void Start()
     {
-        bgmButton.onClick.AddListener(() => ToggleMute());
+        bgmButton.onClick.AddListener(() =>
+        {
+            AudioManager.Instance.PlaySoundEffects("click");
+            ToggleMute();
+        });
     }
     public void ToggleMute()
     {

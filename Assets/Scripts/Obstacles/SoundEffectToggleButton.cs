@@ -14,7 +14,11 @@ public class SoundEffectToggleButton : MonoBehaviour
 
     private void Start()
     {
-        soundEffectButton.onClick.AddListener(() => ToggleMute());
+        soundEffectButton.onClick.AddListener(() =>
+        {
+            AudioManager.Instance.PlaySoundEffects("click");
+            ToggleMute();
+        });
     }
     public void ToggleMute()
     {

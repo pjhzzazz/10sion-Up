@@ -61,11 +61,12 @@ public class GameManager : MonoBehaviour
         {
             case GameState.StartMenu:
                 UIManager.Instance.OpenUI(UIType.StartMenu);
-                AudioManager.Instance.PlayBGM("bgm");
+                AudioManager.Instance.PlayBGM("bgm1");
                 break;
 
             case GameState.SelectingStage:
                 UIManager.Instance.OpenUI(UIType.SelectingStage);
+                AudioManager.Instance.PlayBGM("bgm1");
                 break;
 
             case GameState.Playing:

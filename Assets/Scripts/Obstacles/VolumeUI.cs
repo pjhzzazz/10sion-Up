@@ -12,7 +12,7 @@ public class VolumeUI : MonoBehaviour
     {
         // 초기화
         bgmSlider.value = PlayerPrefs.GetFloat("BGMVolume", 1f);
-        soundEffectSlider.value = PlayerPrefs.GetFloat("SFXVolume", 1f);
+        soundEffectSlider.value = PlayerPrefs.GetFloat("SoundEffectVolume", 1f);
 
         // 슬라이더 값 변경 시 AudioManager에 반영
         bgmSlider.onValueChanged.AddListener((value) =>
@@ -23,11 +23,11 @@ public class VolumeUI : MonoBehaviour
         soundEffectSlider.onValueChanged.AddListener((value) =>
         {
             AudioManager.Instance.SetSoundEffectVolume(value);
-            if (Time.time - lastPlayTime > 0.5f)
-            {
-                AudioManager.Instance.PlaySoundEffects("click");         //클릭소리로 미리듣기
-                lastPlayTime = Time.time;
-            }
+            //if (Time.time - lastPlayTime > 0.5f)
+            //{
+            //    AudioManager.Instance.PlaySoundEffects("click");         //클릭소리로 미리듣기
+            //    lastPlayTime = Time.time;
+            //}
         });
     }
 }

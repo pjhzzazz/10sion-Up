@@ -13,7 +13,9 @@ public class AudioManager : MonoBehaviour
     public AudioClip[] soundEffects;
 
     public Dictionary<string, AudioClip> bgmDict = new();
-    public Dictionary<string, AudioClip> soundEffectDict = new(); //사운드 이펙트
+    public Dictionary<string, AudioClip> soundEffectDict = new(); 
+
+    private string currentBGMName = "";
 
     void Awake()
     {
@@ -33,7 +35,7 @@ public class AudioManager : MonoBehaviour
             Destroy(gameObject);
         }
         float bgmVol = PlayerPrefs.GetFloat("BGMVolume", 1f);
-        float sfxVol = PlayerPrefs.GetFloat("SoundEffectVolume", 1f);  //저장된 사운드 입력값 불러오기
+        float soundEffectVol = PlayerPrefs.GetFloat("SoundEffectVolume", 1f);  //저장된 사운드 입력값 불러오기
     }
 
     public void PlaySoundEffects(string name)
@@ -46,9 +48,13 @@ public class AudioManager : MonoBehaviour
     {
         if (bgmDict.ContainsKey(name))
         {
-            bgmSource.clip = bgmDict[name];
-            bgmSource.loop = true;
+            if (currentBGMName == name) return; // 중복 재생 방지
+            currentBGMName = name;
+
+            AudioClip clip = bgmDict[name];
+            bgmSource.clip = clip;
             bgmSource.Play();
+        
         }
     }
 

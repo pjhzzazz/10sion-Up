@@ -9,7 +9,11 @@ public class CloseOptionButton : MonoBehaviour
     public Button closeButton;
     void Start()
     {
-        closeButton.onClick.AddListener(()=> optionPanel.SetActive(false));
+        closeButton.onClick.AddListener(() =>
+        {
+            AudioManager.Instance.PlaySoundEffects("click");
+            optionPanel.SetActive(false);
+        });
     }
 
     // Update is called once per frame
