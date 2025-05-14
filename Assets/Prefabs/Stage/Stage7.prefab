@@ -630,7 +630,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   redLasers:
-  - {fileID: 6518531450712513500, guid: bbb2b0761f3b0b54081d254dc5ab923b, type: 3}
+  - {fileID: 6339732174489563543}
   - {fileID: 1789839446086013293, guid: d37f47095ed0c0440807680d88de5ce7, type: 3}
 --- !u!1 &1568935975287406826
 GameObject:
@@ -2447,7 +2447,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blueLasers:
-  - {fileID: 8224293438706975282, guid: 5663f05abf4ec03448bfb702064775af, type: 3}
+  - {fileID: 2956948397990157701}
   - {fileID: 5104514682546222388, guid: e84c4f00ef808f443b5fa61163648ef6, type: 3}
 --- !u!95 &1127394163369235669
 Animator:

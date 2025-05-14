@@ -3066,6 +3066,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RepeatingSword (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2103827673687361512, guid: dd6a7d01c3e7edb40a2d8d19c6f8cfce, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7986580464005418210, guid: dd6a7d01c3e7edb40a2d8d19c6f8cfce, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3139,6 +3143,10 @@ PrefabInstance:
     - target: {fileID: 2103827673687361512, guid: dd6a7d01c3e7edb40a2d8d19c6f8cfce, type: 3}
       propertyPath: m_Name
       value: RepeatingSword
+      objectReference: {fileID: 0}
+    - target: {fileID: 2103827673687361512, guid: dd6a7d01c3e7edb40a2d8d19c6f8cfce, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7986580464005418210, guid: dd6a7d01c3e7edb40a2d8d19c6f8cfce, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4931,6 +4939,10 @@ PrefabInstance:
     - target: {fileID: 2103827673687361512, guid: dd6a7d01c3e7edb40a2d8d19c6f8cfce, type: 3}
       propertyPath: m_Name
       value: RepeatingSword (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2103827673687361512, guid: dd6a7d01c3e7edb40a2d8d19c6f8cfce, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7986580464005418210, guid: dd6a7d01c3e7edb40a2d8d19c6f8cfce, type: 3}
       propertyPath: m_LocalPosition.x

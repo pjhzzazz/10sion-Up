@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7902355146337539074
 Transform:
   m_ObjectHideFlags: 0
@@ -1802,7 +1802,7 @@ GameObject:
   - component: {fileID: 7273059752472029749}
   - component: {fileID: 8882034557752834687}
   - component: {fileID: 1522427103238240113}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: PuzzleCollision
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -3738,9 +3738,9 @@ GameObject:
   - component: {fileID: 749706574145703105}
   - component: {fileID: 5729896674004862584}
   - component: {fileID: 2046670348108705887}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
