@@ -10,14 +10,20 @@ public class PressurePlate : MonoBehaviour
     public PressurePlateActiveBlock.PlateColor SelectedPlateColor;
     private void OnTriggerStay2D(Collider2D collision)
     {
-        animator?.SetBool("isPress", true);
-        SetDoorState(true);
+        if (!collision.CompareTag("KeyTrigger"))
+        {
+            animator?.SetBool("isPress", true);
+            SetDoorState(true);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        animator?.SetBool("isPress", false);
-        SetDoorState(false);
+        if (!collision.CompareTag("KeyTrigger"))
+        {
+            animator?.SetBool("isPress", false);
+            SetDoorState(false);
+        }
     }
 
     private void SetDoorState(bool open)
