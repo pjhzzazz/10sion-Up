@@ -12,13 +12,6 @@ public class RepeatSnowBall : MonoBehaviour
         Destroy(gameObject, lifeSpan);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("RedPlayer") || collision.gameObject.CompareTag("BluePlayer"))
