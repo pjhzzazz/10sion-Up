@@ -190,6 +190,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee7c255d25624a5478efcc1e5737ac78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interval: 2
-  _rigidbody2D: {fileID: 5994932706841907691}
-  spikePrefab: {fileID: 3593650136446753681}
