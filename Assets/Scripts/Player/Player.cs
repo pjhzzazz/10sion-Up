@@ -66,7 +66,7 @@ public class Player : MonoBehaviour
         {
             if (collision.CompareTag("Water"))
             {
-                GameManager.gameManager.GameOver();
+                GameManager.Instance.GameOver();
                 animationHandler.Die();
             }
             else if (collision.CompareTag("Fire"))
@@ -82,7 +82,7 @@ public class Player : MonoBehaviour
             }
             else if (collision.CompareTag("Fire"))
             {
-                GameManager.gameManager.GameOver();
+                GameManager.Instance.GameOver();
                 animationHandler.Die();
 
             }

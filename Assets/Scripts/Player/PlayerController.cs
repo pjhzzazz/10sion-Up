@@ -80,6 +80,6 @@ public class PlayerController : Player
 
     public override void Death()
     {
-        GameManager.gameManager.GameOver();
+        GameManager.Instance.GameOver();
     }
 }
