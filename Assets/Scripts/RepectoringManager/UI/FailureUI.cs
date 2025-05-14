@@ -13,12 +13,14 @@ public class FailureUI : BaseUI
     {
         retryBtn.onClick.AddListener(() =>
         {
+            AudioManager.Instance.PlaySoundEffects("click");
             UIButtonHandler.OnStageSelectAndRestartButtonClicked(GameManager.Instance.selectedStage);
             Hide();
         });
 
         EndBtn.onClick.AddListener(() =>
         {
+            AudioManager.Instance.PlaySoundEffects("click");
             UIButtonHandler.OnMainMenuButtonClicked();
             Hide();
         });

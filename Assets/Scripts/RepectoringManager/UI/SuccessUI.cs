@@ -12,6 +12,7 @@ public class SuccessUI : BaseUI
     {
         continueBtn.onClick.AddListener(() =>
             {
+                AudioManager.Instance.PlaySoundEffects("click");
                 GameManager.Instance.NextStage();
                 Hide();
             });
