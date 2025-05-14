@@ -23,7 +23,7 @@ public class RepeatSnowBall : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("RedPlayer") || collision.gameObject.CompareTag("BluePlayer"))
         {
-            Destroy(collision.gameObject);
+            GameManager.Instance.GameOver();
         }
     }
 }

@@ -8,6 +8,7 @@ using UnityEngine.XR;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
+
     public enum GameState {StartMenu, SelectingStage, Playing, Paused, GameOver, GameClear }
     public GameState CurrentState { get; private set; }
 
@@ -194,7 +195,6 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         SceneController.Instance.LoadScene("MainMenuScene", () =>
         {
-            AudioManager.Instance.PlaySoundEffects("click");
             ChangeState(GameState.StartMenu);
         });
     }

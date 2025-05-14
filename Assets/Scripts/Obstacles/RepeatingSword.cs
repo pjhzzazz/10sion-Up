@@ -28,7 +28,7 @@ public class RepeatingSword : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("RedPlayer") || collision.gameObject.CompareTag("BluePlayer"))
         {
-            Destroy(collision.gameObject);
+            GameManager.Instance.GameOver();
         }
         else
         {

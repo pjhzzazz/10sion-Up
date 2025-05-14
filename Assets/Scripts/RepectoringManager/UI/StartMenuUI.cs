@@ -14,10 +14,10 @@ public class StartMenuUI : BaseUI
     private void Awake()
     {
         startBtn.onClick.AddListener(() =>
-           {
-               AudioManager.Instance.PlaySoundEffects("click");
-               UIButtonHandler.OnMainMenuButtonClicked();
-           });
+        {
+            AudioManager.Instance.PlaySoundEffects("click");
+            UIButtonHandler.OnMainMenuButtonClicked();
+        });
         optionBtn.onClick.AddListener(() =>
         {
             AudioManager.Instance.PlaySoundEffects("click");

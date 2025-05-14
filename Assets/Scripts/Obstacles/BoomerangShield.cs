@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BoomerangShield : MonoBehaviour
 {
+
     public float distance = 3f;           // 이동 거리
     public float speed = 2f;              // 이동 속도
     public float spinSpeed = 600f;        // 회전 속도 (도/초)

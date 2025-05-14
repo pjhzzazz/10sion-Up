@@ -20,8 +20,9 @@ public class RedLaser : MonoBehaviour
     {
         if (other.CompareTag("BluePlayer"))
         {
-            Debug.Log("WaterPlayer°¡ Á×À½");
-           
+            GameManager.Instance.GameOver();
+
+
         }
     }
 

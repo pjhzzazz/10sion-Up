@@ -7,7 +7,7 @@ public class VolumeUI : MonoBehaviour
 {
     public Slider bgmSlider;
     public Slider soundEffectSlider;
-    private float lastPlayTime = 0f;
+    //private float lastPlayTime = 0f;
     void Start()
     {
         // √ ±‚»≠

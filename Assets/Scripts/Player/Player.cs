@@ -55,39 +55,41 @@ public class Player : MonoBehaviour
 
     private void Movment(Vector2 direction)
     {
-        direction = new Vector2(direction.x * 5f, _rigidbody.velocity.y);
-        _rigidbody.velocity = direction;
-        animationHandler.Move(direction);
+        Vector2 velocity = _rigidbody.velocity;
+        velocity.x = direction.x * 5f;
+        _rigidbody.velocity = velocity;
+
+        animationHandler.Move(velocity);
     }
 
-    //private void OnTriggerEnter2D(Collider2D collision)
-    //{
-    //    if (playerType == PlayerType.Red)
-    //    {
-    //        if (collision.CompareTag("Water"))
-    //        {
-    //            GameManager.Instance.GameOver();
-    //            animationHandler.Die();
-    //        }
-    //        else if (collision.CompareTag("Fire"))
-    //        {
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (playerType == PlayerType.Red)
+        {
+            if (collision.CompareTag("Water"))
+            {
+                GameManager.Instance.GameOver();
+                animationHandler.Die();
+            }
+            else if (collision.CompareTag("Fire"))
+            {
+                
+            }
+        }
+        else if (playerType == PlayerType.Blue)
+        {
+            if (collision.CompareTag("Water"))
+            {
+                
+            }
+            else if (collision.CompareTag("Fire"))
+            {
+                GameManager.Instance.GameOver();
+                animationHandler.Die();
 
-    //        }
-    //    }
-    //    else if (playerType == PlayerType.Blue)
-    //    {
-    //        if (collision.CompareTag("Water"))
-    //        {
-
-    //        }
-    //        else if (collision.CompareTag("Fire"))
-    //        {
-    //            GameManager.Instance.GameOver();
-    //            animationHandler.Die();
-
-    //        }
-    //    }
-    //}
+            }
+      }
+    }
 
     public virtual void Death()
     {
