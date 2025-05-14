@@ -8,7 +8,7 @@ public class LiquidWater : MonoBehaviour
     {
         if (collision.CompareTag("RedPlayer"))
         {
-            //게임오버
+            GameManager.Instance.GameOver();
         }
     }
 }
