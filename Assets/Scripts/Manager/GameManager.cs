@@ -102,7 +102,6 @@ public class GameManager : MonoBehaviour
             StageController.Instance.ChangeStage(selectedStage);
         });
     }
-
     public void AddGem(int Gem) // µÊ¡°
     {
         gainedGem += Gem;

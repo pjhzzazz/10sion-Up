@@ -19,7 +19,6 @@ public class StageController : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
         }
         else Destroy(gameObject);
     }
@@ -62,7 +61,6 @@ public class StageController : MonoBehaviour
         if (nextStageIndex < stageParents.Length)
         {
             ChangeStage(nextStageIndex);
-            GameManager.Instance.selectedStage = nextStageIndex;
         }
         else
         {
