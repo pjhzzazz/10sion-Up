@@ -16,13 +16,13 @@ public class PickupableKeyDoor : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("KeyTrigger") && spriteAndCollider != null)
+        if (collision.CompareTag("KeyTrigger") && spriteAndCollider != null && spriteAndCollider.activeSelf)
             spriteAndCollider.SetActive(false);
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("KeyTrigger") && spriteAndCollider != null)
+        if (collision.CompareTag("KeyTrigger") && spriteAndCollider != null && spriteAndCollider.activeSelf)
             spriteAndCollider.SetActive(true);
     }
 }
