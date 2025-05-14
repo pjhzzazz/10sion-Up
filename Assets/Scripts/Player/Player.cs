@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public enum PlayerType { Fire, Water }
+    public enum PlayerType { Red, Blue }
     public PlayerType playerType;
 
     protected Rigidbody2D _rigidbody;
@@ -62,9 +62,9 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (playerType == PlayerType.Fire)
+        if (playerType == PlayerType.Red)
         {
-            if (collision.CompareTag("Wate"))
+            if (collision.CompareTag("Water"))
             {
                 GameManager.gameManager.GameOver();
                 animationHandler.Die();
@@ -74,7 +74,7 @@ public class Player : MonoBehaviour
                 
             }
         }
-        else if (playerType == PlayerType.Water)
+        else if (playerType == PlayerType.Blue)
         {
             if (collision.CompareTag("Water"))
             {
