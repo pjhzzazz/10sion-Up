@@ -8,7 +8,7 @@ public class GemRed : MonoBehaviour
     {
         if (collision.CompareTag("RedPlayer"))
         {
-            GameManager.gameManager.AddGem(1);
+            GameManager.Instance.AddGem(1);
             Destroy(gameObject);
         }
     }

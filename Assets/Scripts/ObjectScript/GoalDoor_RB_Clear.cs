@@ -24,7 +24,7 @@ public class GoalDoor_RB_Clear : MonoBehaviour
         if (isArriveRed && isArriveBlue)
         {
             Debug.Log("∞Ò¿Œ!");
-            GameManager.gameManager.Success();
+            GameManager.Instance.GameClear();
         }
     }
 }
