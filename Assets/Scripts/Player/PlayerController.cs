@@ -8,8 +8,8 @@ public class PlayerController : Player
     public ControlType controlType = ControlType.Player1;
 
     public float jumpForce = 5f;
-    private bool isGrounded = true;
-    private bool isJumping = false;
+    public bool isGrounded = true;
+    public bool isJumping = false;
 
 
 
@@ -64,6 +64,11 @@ public class PlayerController : Player
                 }
             }
         }
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ground")) isGrounded = true;
     }
 
     void OnCollisionExit2D(Collision2D collision)
