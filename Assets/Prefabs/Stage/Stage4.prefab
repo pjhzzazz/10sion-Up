@@ -7218,6 +7218,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlueLaserVertical
       objectReference: {fileID: 0}
+    - target: {fileID: 3004965348867528985, guid: e84c4f00ef808f443b5fa61163648ef6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4235215665385545384, guid: e84c4f00ef808f443b5fa61163648ef6, type: 3}
       propertyPath: m_LocalScale.y
       value: 3
@@ -7952,6 +7956,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlueLaserVertical (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3004965348867528985, guid: e84c4f00ef808f443b5fa61163648ef6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4235215665385545384, guid: e84c4f00ef808f443b5fa61163648ef6, type: 3}
       propertyPath: m_LocalScale.y
       value: 3
@@ -8032,6 +8040,10 @@ PrefabInstance:
     - target: {fileID: 3004965348867528985, guid: e84c4f00ef808f443b5fa61163648ef6, type: 3}
       propertyPath: m_Name
       value: BlueLaserVertical (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3004965348867528985, guid: e84c4f00ef808f443b5fa61163648ef6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4235215665385545384, guid: e84c4f00ef808f443b5fa61163648ef6, type: 3}
       propertyPath: m_LocalScale.y
