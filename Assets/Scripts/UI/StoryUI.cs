@@ -24,8 +24,11 @@ public class StoryUI : BaseUI, IPointerClickHandler
         objects[currentIndex].SetActive(false);
 
         currentIndex++;
-        if (currentIndex >= objects.Length) GameManager.Instance.ReturnToSelectingStage();
-
+        if (currentIndex >= objects.Length)
+        {
+            GameManager.Instance.ReturnToSelectingStage();
+            return; //  뒤에 SetActive(true) 안 하도록 빠져나오기
+        }
         objects[currentIndex].SetActive(true);
     }
 }
