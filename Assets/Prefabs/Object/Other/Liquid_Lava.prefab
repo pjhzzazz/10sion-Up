@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3835322181155658728}
   - component: {fileID: 2867424802845463898}
   - component: {fileID: 149928529937319493}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Liquid_Lava
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8984273411857601199}
   - component: {fileID: 5130658149107994843}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: liquidLavaTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}

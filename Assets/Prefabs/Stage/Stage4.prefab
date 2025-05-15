@@ -6722,6 +6722,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RollingRock
       objectReference: {fileID: 0}
+    - target: {fileID: 6503052643533417120, guid: 20c450a22d1c5a24e956434305b9757d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6624710602110453025, guid: 20c450a22d1c5a24e956434305b9757d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.546
@@ -7214,6 +7218,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlueLaserVertical
       objectReference: {fileID: 0}
+    - target: {fileID: 3004965348867528985, guid: e84c4f00ef808f443b5fa61163648ef6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4235215665385545384, guid: e84c4f00ef808f443b5fa61163648ef6, type: 3}
       propertyPath: m_LocalScale.y
       value: 3
@@ -7302,6 +7310,10 @@ PrefabInstance:
     - target: {fileID: 6503052643533417120, guid: 20c450a22d1c5a24e956434305b9757d, type: 3}
       propertyPath: m_Name
       value: RollingRock (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6503052643533417120, guid: 20c450a22d1c5a24e956434305b9757d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6624710602110453025, guid: 20c450a22d1c5a24e956434305b9757d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7662,6 +7674,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ButtonDoorBlock_Red
       objectReference: {fileID: 0}
+    - target: {fileID: 6713359349146268633, guid: d4f2f2b46cd0b3048b41783b91e8f697, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7940,6 +7956,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlueLaserVertical (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3004965348867528985, guid: e84c4f00ef808f443b5fa61163648ef6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4235215665385545384, guid: e84c4f00ef808f443b5fa61163648ef6, type: 3}
       propertyPath: m_LocalScale.y
       value: 3
@@ -8020,6 +8040,10 @@ PrefabInstance:
     - target: {fileID: 3004965348867528985, guid: e84c4f00ef808f443b5fa61163648ef6, type: 3}
       propertyPath: m_Name
       value: BlueLaserVertical (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3004965348867528985, guid: e84c4f00ef808f443b5fa61163648ef6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4235215665385545384, guid: e84c4f00ef808f443b5fa61163648ef6, type: 3}
       propertyPath: m_LocalScale.y
@@ -8146,6 +8170,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ButtonDoorBlock_Red (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6713359349146268633, guid: d4f2f2b46cd0b3048b41783b91e8f697, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8207,6 +8235,10 @@ PrefabInstance:
     - target: {fileID: 6512177559401029358, guid: 8e8b5fb79a4740544bf441cbd75ea956, type: 3}
       propertyPath: m_Name
       value: Button_Red
+      objectReference: {fileID: 0}
+    - target: {fileID: 6512177559401029358, guid: 8e8b5fb79a4740544bf441cbd75ea956, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8004481482925557238, guid: 8e8b5fb79a4740544bf441cbd75ea956, type: 3}
       propertyPath: SelectedPlateColor
@@ -8890,6 +8922,10 @@ PrefabInstance:
     - target: {fileID: 6713359349146268633, guid: d4f2f2b46cd0b3048b41783b91e8f697, type: 3}
       propertyPath: m_Name
       value: ButtonDoorBlock_Red (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6713359349146268633, guid: d4f2f2b46cd0b3048b41783b91e8f697, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
