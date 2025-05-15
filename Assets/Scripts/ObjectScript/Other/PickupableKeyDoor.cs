@@ -4,20 +4,25 @@ using UnityEngine;
 
 public class PickupableKeyDoor : MonoBehaviour
 {
-    [SerializeField] GameObject spriteAndCollider;
+    private GameObject spriteAndCollider;
 
-    private void OnTriggerStay2D(Collider2D collision)
+    void Awake()
     {
-        if (collision.CompareTag("KeyTrigger"))
-        {
-            spriteAndCollider.SetActive(false);
-        }
+        // "SpriteAndCollider" 라는 이름의 자식만 찾아서 캐싱
+        spriteAndCollider = transform.Find("lock_yellow")?.gameObject;
+        if (spriteAndCollider == null)
+            Debug.LogError("자식 'lock_yellow' 를 찾을 수 없습니다.");
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("KeyTrigger") && spriteAndCollider != null && spriteAndCollider.activeSelf)
+            spriteAndCollider.SetActive(false);
+    }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("KeyTrigger"))
-        {
+        if (collision.CompareTag("KeyTrigger") && spriteAndCollider != null && spriteAndCollider.activeSelf)
             spriteAndCollider.SetActive(true);
-        }
     }
 }

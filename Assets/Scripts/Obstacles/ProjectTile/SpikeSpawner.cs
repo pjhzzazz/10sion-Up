@@ -12,15 +12,16 @@ public class SpikeSpawner : MonoBehaviour
     {
         InvokeRepeating("SpawnSpike", interval, interval);
     }
-   
 
+    private void OnDisable()
+    {
+        CancelInvoke("SpawnSpike"); //비활성화되면 자동으로 반복 중단
+    }
     void SpawnSpike()
     {
-       
-            Instantiate(spikeTopPrefab, topSpawnPoint.position, Quaternion.identity);
-     
 
-        
+            Instantiate(spikeTopPrefab, topSpawnPoint.position, Quaternion.identity);
+             
             Instantiate(spikeBottomPrefab, bottomSpawnPoint.position, Quaternion.identity);
      
     }

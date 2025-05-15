@@ -15,18 +15,24 @@ public class PlayerKeyPickUp : MonoBehaviour
 
     bool isInArea = false;
 
+    public static bool isHeld = false;
+
     void Update()
     {
         if (Input.GetKeyDown(pickKey) && isInArea)
         {
-            if (heldKey == null)
+            if (!isHeld)
+            {
                 TryPickUp();
-            else
+            }
+            else if (isHeld)
+            {
                 DropKey();
+            }
         }
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Key"))
         {
@@ -58,7 +64,10 @@ public class PlayerKeyPickUp : MonoBehaviour
 
     void DropKey()
     {
-        heldKey.Drop();
-        heldKey = null;
+        if (heldKey != null)
+        {
+            heldKey.Drop();
+            return;
+        }
     }
 }

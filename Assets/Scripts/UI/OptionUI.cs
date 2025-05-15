@@ -23,7 +23,7 @@ public class OptionUI : BaseUI
         retryBtn.onClick.AddListener(() => 
         {
             AudioManager.Instance.PlaySoundEffects("click");
-            UIButtonHandler.OnStageSelectAndRestartButtonClicked(GameManager.Instance.selectedStage); 
+            UIButtonHandler.OnStageSelectAndRestartButtonClicked(GameManager.Instance.selectedStage);
             Hide(); 
         });
         mainMenuBtn.onClick.AddListener(UIButtonHandler.OnMainMenuButtonClicked);

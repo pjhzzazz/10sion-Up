@@ -13,7 +13,10 @@ public class SpawnSwordManager : MonoBehaviour
 
         InvokeRepeating("SpawnFlyingSword", spawnInterval, spawnInterval);
     }
-
+    private void OnDisable()
+    {
+        CancelInvoke("SpawnFlyingSword"); //비활성화되면 자동으로 반복 중단
+    }
     void SpawnFlyingSword()
     {
         if (flyingSwordPrefab != null)
